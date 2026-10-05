@@ -31,7 +31,7 @@
 .rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
 @media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
 .rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
-</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed" style="background-color: #f8f9fa !important; color: #191c1d !important; opacity: 1 !important; visibility: visible !important; min-height: 100vh; overflow-y: auto;"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">filter_vintage</span><span class="font-title-lg text-title-lg font-semibold tracking-tight text-on-surface">Photos</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-transform"><span class="material-symbols-outlined text-[22px]">cast</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface" style="background-color: #f8f9fa !important; opacity: 1 !important; visibility: visible !important;"><div class="flex flex-col w-full selection:bg-primary-fixed"><!-- Mode Switcher & Dynamic Sub-Header -->
+</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed" style="background-color: #f8f9fa !important; color: #191c1d !important; opacity: 1 !important; visibility: visible !important; min-height: 100vh; overflow-y: auto;"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">filter_vintage</span><span class="font-title-lg text-title-lg font-semibold tracking-tight text-on-surface">Photos</span></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface" style="background-color: #f8f9fa !important; opacity: 1 !important; visibility: visible !important;"><div class="flex flex-col w-full selection:bg-primary-fixed"><!-- Mode Switcher & Dynamic Sub-Header -->
 <div class="px-margin pt-space-xs pb-space-xs flex flex-col gap-space-xs bg-surface">
 <!-- Top Floating Pill Tabs -->
 <div class="self-center p-1 bg-surface-container rounded-full flex items-center shadow-sm">
@@ -57,33 +57,8 @@
 <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Can't remember the exact date? Tap the physical fragments you recall.</p>
 </div>
 
-<!-- 1. Pinned Persistent Trail Bar (Sticky under subheader) -->
-<div class="sticky top-16 z-40 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high px-margin py-2 flex flex-col gap-1.5 shadow-xs">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md font-medium">
-<span class="material-symbols-outlined text-[16px] text-primary">alt_route</span>
-<span class="">Persistent Clue Trail (Tap to edit):</span>
-</div>
-<span class="font-label-md text-label-md text-secondary font-semibold" id="clue-count">0 Clues Anchored</span>
-</div>
-<!-- Horizontal scrolling chips trail -->
-<div class="flex items-center gap-2 overflow-x-auto pb-1" id="clue-trail" style="scrollbar-width: none;">
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(1)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">Who</span></button>
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(2)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">What</span></button>
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(3)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">Where</span></button>
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(5)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">When</span></button>
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(4)">
-<span class="material-symbols-outlined text-[15px]">add</span>
-<span class="">Life Stage</span>
-</button>
-<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(6)">
-<span class="material-symbols-outlined text-[15px]">add</span>
-<span class="">Anomaly</span>
-</button>
-</div>
-</div>
 <!-- Interactive Progressive Soundboard Accordions (10 Strict Categories) -->
-<div class="px-margin flex flex-col gap-2.5 mt-3 pb-space-lg" id="wayfinder-accordions">
+<div class="px-margin flex flex-col gap-3 mt-3 pb-space-lg" id="wayfinder-accordions">
 <!-- Section 1: Who was with you (Collapsed / Resolved) -->
 <div class="rounded-xl bg-surface-container-lowest shadow-md border-2 border-primary/40 transition-all" id="sec-1">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(1)">
@@ -93,90 +68,90 @@
 </div>
 <div class="min-w-0">
 <div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">1. Who was with you</span><span class="px-1.5 py-0.5 rounded bg-primary-fixed text-primary font-label-md text-label-md font-medium">Active Focus</span></div>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap a tile below to anchor this clue</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Tap a tile below to anchor this clue</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-primary text-[22px] transition-transform rotate-180" id="sec-icon-1">expand_more</span>
 </button>
 <div class="px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-1">
 <div class="grid grid-cols-2 gap-space-sm">
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Sister')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Sister')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">person</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Sister</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Family</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Sister</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Family</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Extended Family')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Extended Family')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">groups</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Extended Family</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Family cluster</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Extended Family</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Family cluster</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Just Me (Solo)')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Just Me (Solo)')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">person</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Just Me (Solo)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Nobody else</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Just Me (Solo)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Nobody else</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Mom &amp; Dad')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Mom &amp; Dad')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">diversity_1</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Mom &amp; Dad</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Family album</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Mom &amp; Dad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Family album</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 1')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 1')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">person</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 1</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Friend 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Friend</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 2')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 2')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">person</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 2</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Friend 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Friend</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 3')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 3')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">person</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 3</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Friend 3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Friend</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'I don&rsquo;t remember who was in it')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'I don&rsquo;t remember who was in it')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">help_outline</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">I don&rsquo;t remember who was in it</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">No specific person</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">I don&rsquo;t remember who was in it</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">No specific person</span>
 </div>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 2: What was happening (Collapsed / Resolved) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-2">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-2">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(2)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -184,60 +159,60 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">2. What was happening</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Tap to choose</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-2">expand_more</span>
 </button>
 <div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-2">
 <div class="grid grid-cols-2 gap-space-sm">
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(2, 'Family Gathering')">
-<div class="flex items-start justify-between w-full">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(2, 'Family Gathering')">
+<div class="flex items-start justify-center w-full">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">celebration</span>
 </div>
 
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Family Gathering</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Group pose in frame</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Family Gathering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Group pose in frame</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(2, 'Lighting Diyas')">
-<div class="flex items-start justify-between w-full">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(2, 'Lighting Diyas')">
+<div class="flex items-start justify-center w-full">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
 <span class="material-symbols-outlined text-[22px]">restaurant</span>
 </div>
 
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Lighting Diyas</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Festival ritual</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Lighting Diyas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Festival ritual</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Rangoli Making')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Rangoli Making')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">photo_camera</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Rangoli Making</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Courtyard floor art</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Rangoli Making</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Courtyard floor art</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Gift Exchange')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Gift Exchange')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">nightlife</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Gift Exchange</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Sweets & gifts</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Gift Exchange</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Sweets & gifts</span>
 </div>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 3: Where / what vibe (Collapsed / Resolved) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-3">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-3">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(3)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -245,57 +220,57 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">3. Where / what vibe</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Tap to choose</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-3">expand_more</span>
 </button>
 <div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-3">
 <div class="grid grid-cols-2 gap-space-sm">
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(3, 'Home Courtyard')">
-<div class="flex items-start justify-between w-full">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(3, 'Home Courtyard')">
+<div class="flex items-start justify-center w-full">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
 <span class="material-symbols-outlined text-[22px]">storefront</span>
 </div>
 
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Home Courtyard</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Home address</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Home Courtyard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Home address</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Living Room')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Living Room')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">deck</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Living Room</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Indoor family space</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Living Room</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Indoor family space</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Terrace')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Terrace')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">beach_access</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Terrace</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Open-air, string lights</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Terrace</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Open-air, string lights</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Neighbour\u2019s House')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Neighbour\u2019s House')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">image_search</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Neighbour’s House</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Adjacent address</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Neighbour’s House</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Adjacent address</span>
 </div>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 4: Life stage / time anchor (Expanded Active Working Section) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-4">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-4">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(4)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -306,7 +281,7 @@
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">4. Life stage / time anchor</span>
 
 </div>
-<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Tap to choose</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center mt-0.5">Tap to choose</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-4">expand_more</span>
@@ -314,50 +289,50 @@
 <div class="hidden px-3.5 pb-4 flex flex-col gap-space-sm" id="sec-body-4">
 <div class="grid grid-cols-2 gap-space-sm">
 <!-- Correlated clue (Blue Tier) -->
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(4, 'Diwali 2023')">
-<div class="flex items-start justify-between w-full">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(4, 'Diwali 2023')">
+<div class="flex items-start justify-center w-full">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
 <span class="material-symbols-outlined text-[22px]">candle</span>
 </div>
 
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Diwali 2023</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Travel cluster</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Diwali 2023</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Travel cluster</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2024')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2024')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">candle</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Diwali 2024</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Travel cluster</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Diwali 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Travel cluster</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2025')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2025')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">candle</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Diwali 2025</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Travel cluster</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Diwali 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Travel cluster</span>
 </div>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2022')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Diwali 2022')">
 <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
 <span class="material-symbols-outlined text-[22px]">candle</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Diwali 2022</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Travel cluster</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">Diwali 2022</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Travel cluster</span>
 </div>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 5: Time and date (Collapsed / Resolved) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-5">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-5">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(5)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -365,7 +340,7 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">5. Time and date</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Tap to choose</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-5">expand_more</span>
@@ -411,8 +386,9 @@
 </div>
 </div>
 </div>
+</div>
 <!-- Section 6: What made this one different (CONTENT FIX: Clean Anomaly Facet) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-6">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-6">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(6)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -420,7 +396,7 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">6. What made this one different</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Anomaly Detection (3 Signals)</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Anomaly Detection (3 Signals)</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-6">expand_more</span>
@@ -434,19 +410,19 @@
 <span class="material-symbols-outlined text-[20px]">person_add</span>
 </div>
 <div class="min-w-0">
-<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">A new person joined</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">New face detected</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">A new person joined</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-center">New face detected</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">add</span>
 </button>
 <!-- Signal 3: An object that wasn't there before -->
-<button class="soundboard-pad p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex items-center justify-between transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(6, 'A different location than usual')"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0"><span class="material-symbols-outlined text-[20px]">category</span></div><div class="min-w-0"><span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">A different location than usual</span><span class="font-body-sm text-body-sm text-on-surface-variant block">Different home than usual</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">add</span></button>
+<button class="soundboard-pad p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex items-center justify-between transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(6, 'A different location than usual')"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0"><span class="material-symbols-outlined text-[20px]">category</span></div><div class="min-w-0"><span class="font-label-lg text-label-lg font-semibold text-on-surface block text-center">A different location than usual</span><span class="font-body-sm text-body-sm text-on-surface-variant block text-center">Different home than usual</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">add</span></button>
 </div>
 </div>
 </div>
 <!-- Section 7: Scenery & time of day (Optional) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-7">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-7">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(7)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -454,37 +430,37 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">7. Scenery &amp; time of day</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Optional</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-7">expand_more</span>
 </button>
 <div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-7">
 <div class="grid grid-cols-2 gap-space-sm">
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(7, 'Diya-lit evening')">
-<div class="flex items-start justify-between w-full">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-24 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(7, 'Diya-lit evening')">
+<div class="flex items-center justify-center w-full">
 <span class="material-symbols-outlined text-primary text-[24px]">wb_twilight</span>
 
 </div>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Diya-lit Evening</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Diya-lit Evening</span>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Warm indoor light')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Warm indoor light')">
 <span class="material-symbols-outlined text-on-surface-variant text-[24px]">nightlight</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Warm Indoor Light</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Warm Indoor Light</span>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Daylight')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Daylight')">
 <span class="material-symbols-outlined text-on-surface-variant text-[24px]">sunny</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Daylight</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Daylight</span>
 </button>
-<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Overcast')">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-center shadow-sm hover:bg-surface-container flex flex-col justify-center items-center gap-2 h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Overcast')">
 <span class="material-symbols-outlined text-on-surface-variant text-[24px]">cloud</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Overcast / Moody</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Overcast / Moody</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 8: What you were wearing (Optional) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-8">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-8">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(8)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -492,7 +468,7 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">8. What you were wearing</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Optional</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-8">expand_more</span>
@@ -513,7 +489,7 @@
 </div>
 </div>
 <!-- Section 9: Objects or details visible (Optional) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-9">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-9">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(9)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -521,7 +497,7 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">9. Objects or details visible</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Optional</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-9">expand_more</span>
@@ -532,31 +508,31 @@
 <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
 <span class="material-symbols-outlined text-[20px]">palette</span>
 </div>
-<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Rangoli</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Rangoli</span>
 </button>
 <button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Sweets / Mithai')">
 <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
 <span class="material-symbols-outlined text-[20px]">bakery_dining</span>
 </div>
-<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Sweets / Mithai</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Sweets / Mithai</span>
 </button>
 <button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Fairy lights')">
 <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
 <span class="material-symbols-outlined text-[20px]">light_mode</span>
 </div>
-<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Fairy lights</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Fairy lights</span>
 </button>
 <button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Diya')">
 <div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
 <span class="material-symbols-outlined text-[20px]">candle</span>
 </div>
-<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Diya</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Diya</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Section 10: Facial expression / pose (Optional, Low Priority) -->
-<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-10">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/40 transition-all" id="sec-10">
 <button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(10)">
 <div class="flex items-center gap-2 min-w-0">
 <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
@@ -564,7 +540,7 @@
 </div>
 <div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">10. Facial expression / pose</span>
-<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional • Low Priority</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface text-center block">Optional • Low Priority</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-10">expand_more</span>
@@ -608,12 +584,10 @@
 <span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,110,44,0.6)]"></span>
 <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Primary Candidate</span>
 </div>
-<h4 class="font-title-lg text-title-lg font-semibold text-on-surface mt-1 truncate">Diwali 2023: Blue Dress with Sister</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">November 2023 • 22 photos</p>
+<h4 class="font-title-lg text-title-lg font-semibold text-on-surface mt-1 ">Diwali 2023: Blue Dress with Sister</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant block text-center">November 2023 • 22 photos</p>
 </div>
-<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-medium shrink-0 shadow-xs">
-          Strong Resonance
-        </span>
+
 </div>
 <!-- Thumbnail Cluster Previews -->
 <div class="grid grid-cols-3 gap-2">
@@ -638,17 +612,15 @@
 <span class="material-symbols-outlined text-[20px]">location_on</span>
 </div>
 <div class="min-w-0">
-<h4 class="font-title-lg text-title-lg font-medium text-on-surface truncate">Diwali 2024: Rangoli Courtyard</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">November 2024 • 11 photos</p>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface text-center">Diwali 2024: Rangoli Courtyard</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant block text-center">November 2024 • 11 photos</p>
 </div>
 </div>
-<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-md text-label-md font-medium shrink-0 ml-2">
-        Correlated clue
-      </span>
+
 </div>
 <!-- Primary Action CTA -->
-<button class="w-full h-12 mt-1 rounded-full bg-primary-container text-on-primary font-title-lg text-title-lg font-medium shadow-md hover:bg-primary active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="openSpace('2023')">
-<span class="">Launch Wayfinding Stream (2 Candidate Spaces)</span>
+<button class="w-full min-h-[3rem] h-auto py-2.5 px-4 mt-1 rounded-full bg-primary-container text-on-primary font-title-lg text-title-lg font-medium shadow-md hover:bg-primary active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="openSpace('2023')">
+<span class="text-center leading-snug whitespace-normal">Launch Wayfinding Stream (2 Candidate Spaces)</span>
 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
 </button>
 </div>
@@ -749,7 +721,7 @@
       location.href = '../sharma/entry_utility.html';
     });
   }
-</script></div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary [&amp;&gt;div]:bg-primary-fixed [&amp;&gt;div]:text-primary"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="photos" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">photo_library</span></div><span class="font-label-md text-label-md font-medium">Photos</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="memories" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><span class="font-label-md text-label-md font-medium">Memories</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="collections" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">folder_copy</span></div><span class="font-label-md text-label-md font-medium">Collections</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="search" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></div><span class="font-label-md text-label-md font-medium">Search</span></a></div></nav>
+</script></div></main>
 
 <button class="bp-toggle" onclick="document.getElementById('bpanel').classList.toggle('bp-open')">How it works</button>
 <aside class="bpanel" id="bpanel">

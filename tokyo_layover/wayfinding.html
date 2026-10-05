@@ -426,7 +426,6 @@
 <div class="flex items-center gap-1.5">
 <span class="font-headline-md text-[0.875rem] font-bold text-on-surface" id="candidate-count-hud">1 Confident Match</span>
 <!-- FIX: percentage badge replaced with qualitative tier label -->
-<span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[10px] font-bold" id="candidate-tier-hud">Strong match</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="candidate-desc-hud">
               Shibuya crossing at night (solo layover)
@@ -702,36 +701,7 @@
   }
 </script></main>
 <!-- Bottom Navigation Bar (Standard Google Photos Material Shell) -->
-<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container/60 shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold [&amp;&gt;div]:bg-primary-fixed [&amp;&gt;div]:text-on-primary-fixed-variant">
-<div class="h-16 px-space-sm flex items-center justify-around">
-<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="photos" href="#">
-<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[22px]">photo_library</span>
-</div>
-<span class="font-label-md text-[11px] text-center leading-none">Photos</span>
-</a>
-<!-- Active: Memories -->
-<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="memories" href="#">
-<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors relative bg-primary-fixed text-on-primary-fixed-variant">
-<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
-<span class="absolute top-1 right-3.5 w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
-</div>
-<span class="font-label-md text-[11px] text-center leading-none font-bold">Memories</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="collections" href="#">
-<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[22px]">folder_copy</span>
-</div>
-<span class="font-label-md text-[11px] text-center leading-none">Collections</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="search" href="#">
-<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[22px]">search</span>
-</div>
-<span class="font-label-md text-[11px] text-center leading-none">Search</span>
-</a>
-</div>
-</nav>
+
 </main>
 <button class="bp-toggle" onclick="document.getElementById('bpanel').classList.toggle('bp-open')">How it works</button>
 <aside class="bpanel" id="bpanel">
