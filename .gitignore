@@ -1,0 +1,4 @@
+node_modules/
+_*.js
+_*.json
+.DS_Store

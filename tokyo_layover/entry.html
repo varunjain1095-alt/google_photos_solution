@@ -1,0 +1,763 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Roboto+Flex:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8f9fa;color:#191c1d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;left:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(-110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
+.bpanel.bp-open{transform:none}
+.bpanel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
+.bpanel h3{font-size:12.5px;font-weight:700;color:#202124;margin:14px 0 4px}
+.bpanel p{margin:0 0 8px}
+.bpanel .bp-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
+.bp-toggle{position:fixed;left:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
+.bp-toggle:hover{background:#1765cc}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9fa","surface-variant":"#e1e3e4","outline":"#727785","surface-container":"#edeeef","on-primary":"#ffffff","on-surface":"#191c1d","tertiary-container":"#8155ff","on-secondary-fixed-variant":"#005320","on-secondary-fixed":"#002108","primary":"#005bbf","surface-container-highest":"#e1e3e4","on-secondary":"#ffffff","on-primary-fixed":"#001a41","inverse-on-surface":"#f0f1f2","tertiary":"#6833ea","on-error-container":"#93000a","on-tertiary-container":"#060021","error":"#ba1a1a","inverse-surface":"#2e3132","on-background":"#191c1d","surface-container-low":"#f3f4f5","secondary":"#006e2c","secondary-fixed":"#89fa9b","surface-container-lowest":"#ffffff","surface-tint":"#005bc0","surface-dim":"#d9dadb","primary-fixed":"#d8e2ff","error-container":"#ffdad6","on-error":"#ffffff","outline-variant":"#c1c6d6","secondary-container":"#86f898","on-secondary-container":"#00722f","surface-container-high":"#e7e8e9","inverse-primary":"#adc7ff","on-primary-fixed-variant":"#004493","on-tertiary":"#ffffff","on-tertiary-fixed":"#20005f","background":"#f8f9fa","tertiary-fixed-dim":"#cdbdff","on-primary-container":"#ffffff","secondary-fixed-dim":"#6ddd81","on-tertiary-fixed-variant":"#4f00d0","surface-bright":"#f8f9fa","primary-container":"#1a73e8","primary-fixed-dim":"#adc7ff","tertiary-fixed":"#e8deff","on-surface-variant":"#414754"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-tablet":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","gutter":"1rem","margin-desktop":"2.5rem","margin-tablet":"1.5rem","space-xl":"2rem"},"fontFamily":{"body-lg":["Roboto Flex"],"body-md":["Roboto Flex"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Roboto Flex"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Roboto Flex"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Roboto Flex"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.015em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"400"}],"title-lg":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg-mobile":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"500"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>/* Phone frame: cap the app at mobile width on wide viewports */@media (min-width:480px){html{background:#e8eaed}body{max-width:430px !important;margin:0 auto !important;box-shadow:0 0 48px rgba(0,0,0,0.14);min-height:100vh}.fixed{left:0 !important;right:0 !important;max-width:430px !important;margin-inline:auto !important}}</style><style>
+.rp-toggle{position:fixed;bottom:76px;right:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.rpanel{position:fixed;top:24px;left:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
+.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
+.rpanel h2{font-size:15px;font-weight:700;margin:0 0 10px}
+.rp-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
+.rp-quote{font-size:13px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
+.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:12.5px;line-height:1.55}
+.rpanel ol li{margin-bottom:5px}
+.rpanel ol b{font-weight:600}
+.rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
+@media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
+.rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
+</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed" style="background-color: #f8f9fa !important; color: #191c1d !important; opacity: 1 !important; visibility: visible !important; min-height: 100vh; overflow-y: auto;"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">filter_vintage</span><span class="font-title-lg text-title-lg font-semibold tracking-tight text-on-surface">Photos</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-transform"><span class="material-symbols-outlined text-[22px]">cast</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface" style="background-color: #f8f9fa !important; opacity: 1 !important; visibility: visible !important;"><div class="flex flex-col w-full selection:bg-primary-fixed"><!-- Mode Switcher & Dynamic Sub-Header -->
+<div class="px-margin pt-space-xs pb-space-xs flex flex-col gap-space-xs bg-surface">
+<!-- Top Floating Pill Tabs -->
+<div class="self-center p-1 bg-surface-container rounded-full flex items-center shadow-sm">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5 transition-all" id="tab-episodic">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">neurology</span>
+<span class="font-label-md text-label-md font-medium">Episodic Memory</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse ml-0.5"></span>
+</button>
+<button class="px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" id="tab-utility">
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+<span class="font-label-md text-label-md font-medium">Utility / Quick Find</span>
+</button>
+</div>
+<!-- Title & Sensory Cue -->
+<div class="mt-space-xs flex flex-col">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold tracking-tight text-on-surface">AI Powered Wayfinder</h1>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,110,44,0.6)]"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Synthesizing Clues</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Can't remember the exact date? Tap the physical fragments you recall.</p>
+</div>
+
+<!-- 1. Pinned Persistent Trail Bar (Sticky under subheader) -->
+<div class="sticky top-16 z-40 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high px-margin py-2 flex flex-col gap-1.5 shadow-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">alt_route</span>
+<span class="">Persistent Clue Trail (Tap to edit):</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-semibold" id="clue-count">0 Clues Anchored</span>
+</div>
+<!-- Horizontal scrolling chips trail -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1" id="clue-trail" style="scrollbar-width: none;">
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(1)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">Who</span></button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(2)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">What</span></button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(3)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">Where</span></button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(5)"><span class="material-symbols-outlined text-[15px]">add</span><span class="">When</span></button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(4)">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Life Stage</span>
+</button>
+<button class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium flex items-center gap-1 hover:bg-surface-container-high transition-all" onclick="jumpToSection(6)">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Anomaly</span>
+</button>
+</div>
+</div>
+<!-- Interactive Progressive Soundboard Accordions (10 Strict Categories) -->
+<div class="px-margin flex flex-col gap-2.5 mt-3 pb-space-lg" id="wayfinder-accordions">
+<!-- Section 1: Who was with you (Collapsed / Resolved) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md border-2 border-primary/40 transition-all" id="sec-1">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(1)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[18px] sec-status">group</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">1. Who was with you</span><span class="px-1.5 py-0.5 rounded bg-primary-fixed text-primary font-label-md text-label-md font-medium">Active Focus</span></div>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap a tile below to anchor this clue</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px] transition-transform rotate-180" id="sec-icon-1">expand_more</span>
+</button>
+<div class="px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-1">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Priya')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Priya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Shared moments</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Ken &amp; Maya')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Ken &amp; Maya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Frequent contacts</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Just Me (Solo)')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Just Me (Solo)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Nobody else</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Mom &amp; Dad')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">diversity_1</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Mom &amp; Dad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Family album</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 1')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 2')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'Friend 3')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Friend 3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Friend</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(1, 'I don&rsquo;t remember who was in it')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">help_outline</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">I don&rsquo;t remember who was in it</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">No specific person</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: What was happening (Collapsed / Resolved) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-2">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(2)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px] sec-status">celebration</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">2. What was happening</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-2">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-2">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(2, 'Sightseeing')">
+<div class="flex items-start justify-between w-full">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+</div>
+
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Sightseeing &amp; Wandering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Solo exploring</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Eating &amp; Dining')">
+<div class="flex items-start justify-between w-full">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</div>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Eating &amp; Dining</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Convenience-store bentos</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Posing for camera')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Posing for camera</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Frontal composition</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(2, 'Dancing')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">nightlife</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Dancing / Live Music</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Low correlation</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 3: Where / what vibe (Collapsed / Resolved) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-3">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(3)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px] sec-status">storefront</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">3. Where / what vibe</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-3">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-3">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(3, 'Neon City')">
+<div class="flex items-start justify-between w-full">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[22px]">location_city</span>
+</div>
+
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Neon City Streets</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Saved place</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Rooftop Bar')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">deck</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Rooftop Bar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">City skyline tags</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Beachside')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">beach_access</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Beachside Sunset</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Coastal coordinates</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(3, 'Family Living Room')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">image_search</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Family Living Room</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Home address radius</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Life stage / time anchor (Expanded Active Working Section) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-4">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(4)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">4. Life stage / time anchor</span>
+
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Tap to choose</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-4">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-4 flex flex-col gap-space-sm" id="sec-body-4">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Correlated clue (Blue Tier) -->
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(4, 'Tokyo Layover 2019')">
+<div class="flex items-start justify-between w-full">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span>
+</div>
+
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Tokyo Layover 2019</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Travel cluster</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'First Job Years')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">First Job Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">2020–2021</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'College Years')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">College Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">2016–2020</span>
+</div>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-28 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(4, 'Weekend Getaways')">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">work</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block truncate">Weekend Getaways</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Short trips</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 5: Time and date (Collapsed / Resolved) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-5">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(5)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px] sec-status">date_range</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">5. Time and date</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Tap to choose</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-5">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-5">
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant">Leading Path: Rough Range / Fuzzy Season</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-space-md py-2 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors flex items-center gap-1.5 active:scale-95" onclick="handleSelectTile(5, '2019')">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_month</span>
+            2019
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors flex items-center gap-1.5 active:scale-95" onclick="handleSelectTile(5, '2017–2021')">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">date_range</span>
+            2017–2021
+          </button>
+
+</div>
+<div class="flex flex-col gap-1.5 mt-space-sm pt-space-xs">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant">Second Path: Precise Year &amp; Month Selector</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative">
+<select class="w-full h-11 px-space-md pr-8 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none focus:outline-none focus:bg-surface-container-high cursor-pointer">
+<option>Year: 2019</option>
+<option>Year: 2018</option>
+<option>Year: 2020</option>
+<option selected="">Any year</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 top-3 pointer-events-none">arrow_drop_down</span>
+</div>
+<div class="relative">
+<select class="w-full h-11 px-space-md pr-8 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none focus:outline-none focus:bg-surface-container-high cursor-pointer">
+<option>Month: March</option>
+<option>Month: April</option>
+<option>Month: February</option>
+<option selected="">Any</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 top-3 pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 6: What made this one different (CONTENT FIX: Clean Anomaly Facet) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-6">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(6)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">6. What made this one different</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Anomaly Detection (none: no recurrence)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-6">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-xs" id="sec-body-6">
+<!-- Empty state: no recurring pattern exists for this context, so no anomaly chips are offered -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-lg text-title-lg font-medium text-on-surface block">No recurring pattern detected</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">This trip happened once. There are no prior instances to compare against.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 7: Scenery & time of day (Optional) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-7">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(7)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">7. Scenery &amp; time of day</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-7">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-7">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150" onclick="handleSelectTile(7, 'Golden Hour')">
+<div class="flex items-start justify-between w-full">
+<span class="material-symbols-outlined text-primary text-[24px]">wb_twilight</span>
+
+</div>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Golden Hour / Dusk</span>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Night Lantern')">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">nightlight</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Night Lantern Glow</span>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Bright Sunlight')">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">sunny</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Bright Sunlight</span>
+</button>
+<button class="soundboard-pad relative p-space-md rounded-xl bg-surface-container-low text-left shadow-sm hover:bg-surface-container flex flex-col justify-between h-24 transform active:scale-95 transition-all duration-150 hover:bg-surface-container" onclick="handleSelectTile(7, 'Overcast')">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">cloud</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate">Overcast / Moody</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 8: What you were wearing (Optional) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-8">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(8)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">checkroom</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">8. What you were wearing</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-8">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-wrap gap-space-xs" id="sec-body-8">
+<button class="px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-2" onclick="handleSelectTile(8, 'Linen Shirt')">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">styler</span>
+        Casual Linen Shirt
+      </button>
+<button class="px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-2" onclick="handleSelectTile(8, 'Dark Jacket')">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">dry_cleaning</span>
+        Dark Jacket
+      </button>
+<button class="px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-2" onclick="handleSelectTile(8, 'Traditional Attire')">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">palette</span>
+        Traditional / Ethnic Attire
+      </button>
+</div>
+</div>
+<!-- Section 9: Objects or details visible (Optional) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-9">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(9)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">category</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">9. Objects or details visible</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-9">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-col gap-space-sm" id="sec-body-9">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Beer Steins')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">sports_bar</span>
+</div>
+<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Beer Steins &amp; Plates</span>
+</button>
+<button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Birthday Cake')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">cake</span>
+</div>
+<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Birthday Cake</span>
+</button>
+<button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Paper Lanterns')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">emoji_objects</span>
+</div>
+<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Paper Lanterns</span>
+</button>
+<button class="soundboard-pad p-3 rounded-xl bg-surface-container-low text-left shadow-xs flex items-center gap-2.5 hover:bg-surface-container transition-all active:scale-95" onclick="handleSelectTile(9, 'Board Game')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">casino</span>
+</div>
+<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Board Game</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 10: Facial expression / pose (Optional, Low Priority) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm border border-transparent transition-all" id="sec-10">
+<button class="w-full p-3.5 flex items-center justify-between text-left" onclick="toggleSection(10)">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider block">10. Facial expression / pose</span>
+<span class="font-title-lg text-title-lg font-medium text-on-surface truncate block">Optional • Low Priority</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform" id="sec-icon-10">expand_more</span>
+</button>
+<div class="hidden px-3.5 pb-3.5 flex flex-wrap gap-space-xs" id="sec-body-10">
+<button class="px-space-md py-2 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-1.5" onclick="handleSelectTile(10, 'Burst of Laughter')">
+<span class="material-symbols-outlined text-[16px] text-secondary">sentiment_very_satisfied</span>
+        Burst of Laughter
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-1.5" onclick="handleSelectTile(10, 'Group Selfie Hug')">
+<span class="material-symbols-outlined text-[16px] text-primary">diversity_3</span>
+        Group Selfie Hug
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container text-on-surface shadow-xs font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-1.5" onclick="handleSelectTile(10, 'Candid Glance')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">visibility</span>
+        Candid Glance
+      </button>
+</div>
+</div>
+</div>
+<!-- 4. Dynamic Candidate Output Deck (Bottom Synthesis Area) -->
+<div class="mx-margin mb-space-lg p-space-md rounded-lg bg-surface-container-lowest shadow-md flex flex-col gap-space-md">
+<!-- Status Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">1 Confident Match</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium">Single booking</span>
+</div>
+<!-- Candidate Spaces List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Primary (Best) Candidate Space -->
+<div class="p-space-md rounded-lg bg-surface-container-low shadow-[0_4px_20px_rgba(0,110,44,0.12)] flex flex-col gap-space-sm cursor-pointer hover:bg-surface-container-low/80 transition-colors" onclick="location.href='wayfinding.html'">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,110,44,0.6)]"></span>
+<span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Only Matching Space</span>
+</div>
+<h4 class="font-title-lg text-title-lg font-semibold text-on-surface mt-1 truncate">Tokyo Solo Layover: Shibuya Nights</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">March 2019 • 6 photos clustered</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-medium shrink-0 shadow-xs">
+          Strong Resonance
+        </span>
+</div>
+<!-- Thumbnail Cluster Previews -->
+<div class="grid grid-cols-3 gap-2">
+<div class="h-20 rounded-xl overflow-hidden shadow-xs relative">
+<img class="w-full h-full object-cover" data-alt="Warm atmospheric evening photograph in Kyoto narrow alley with paper lanterns casting a gentle orange glow on friends laughing together outside an authentic traditional izakaya wooden entrance, soft bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDGX9h4gXg0xBDYS2YKG08lDm0tA5OjHQOcOz166x2yrdJ7mc-UaASXPDd05uC9igacE-_5kxHtJyw5f13TMPNvrsy-DjLK1rqZlj39mB3yvNOlxskxeUv9rKsh_EltU1x1pwqyaOhy6kicb8Pdg2ll0ZLidpNzA5kPW6dAs8_ht6sIyXfRP8vrtkKXFJ-LFV1g6qzoTyCfn_VK78CDR_R3moC57kdarK6dzJRqU4bVNOFbQtd8vpOmg">
+</div>
+<div class="h-20 rounded-xl overflow-hidden shadow-xs relative">
+<img class="w-full h-full object-cover" data-alt="Close-up joyful toast with frosted Japanese beer steins and small tapas plates resting on a dark rustic wooden bar counter in a crowded cozy restaurant, warm tungsten lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuQQBT9HpOsPHEWKc65jyk_oYksoEFgj5SkgFkBpxoQFsnx9WTDc_P0V71sZTSdMiP1cY2f-Qqs7z9vcT94f7DkU6aW2hSAznNHEUkePpMHD9j_iYtBGjMETYmCpSK5GmlGOg4NxvR_3BlKKMAqOqiQzyL7fBE-IL0i16NXE92FReDQQW8bRs72G9XRodQfoegmZM_QM09FKGxQJmhVCKlKvnasEbS_sEUTRB3mqKtkx1kaCAGr57D_Q">
+</div>
+<div class="h-20 rounded-xl overflow-hidden shadow-xs relative bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Candid group photograph of two cheerful friends smiling while sharing appetizers at night along the Kamogawa river lantern-lit terrace during humid summer in Kyoto." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI202QDOEeY35JFFLs000iomtWgIrr-iC-UfQQ_dtZRf1tklCSM54j0QHe4nAjsCILkaWX-fFE01TrOps113ILCPSyTmqRN-cwtOgHgUTu5ytpEqPutoqnIeqp2inauB6HCd0hDgSs09iJ1QUitUeH0HV4GPWpHiKTxwMJH1-_ejusUd8EJp-7uipdOJEcm8TGlmGFgYPkriiNJkIWdmW9nQ0IWGzH3q827ZpI2LicU4zZ_TC6Z_IwRA">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] flex items-center justify-center text-on-primary font-label-md text-label-md font-semibold">
+            +3 more
+          </div>
+</div>
+</div>
+</div>
+<!-- No secondary candidates: unique context emits exactly one space -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">One Gmail booking, no recurring pattern detected. No alternatives manufactured.</p>
+</div>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full h-12 mt-1 rounded-full bg-primary-container text-on-primary font-title-lg text-title-lg font-medium shadow-md hover:bg-primary active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="location.href='wayfinding.html'">
+<span class="">Open Confident Space (1 Match)</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<script>
+  // Progressive Accordion State & Logic
+  window.toggleSection = function(secNum) {
+    for (let i = 1; i <= 10; i++) {
+      const body = document.getElementById('sec-body-' + i);
+      const icon = document.getElementById('sec-icon-' + i);
+      const card = document.getElementById('sec-' + i);
+      if (i === secNum) {
+        const isHidden = body.classList.contains('hidden');
+        if (isHidden) {
+          body.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+          card.classList.add('border-primary/40', 'border-2');
+        } else {
+          body.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+          card.classList.remove('border-primary/40', 'border-2');
+        }
+      } else {
+        body.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+        card.classList.remove('border-primary/40', 'border-2');
+      }
+    }
+  };
+
+  window.jumpToSection = function(secNum) {
+    window.toggleSection(secNum);
+    const el = document.getElementById('sec-' + secNum);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  // Clue-trail wiring: selections update the Persistent Clue Trail and mark the tile
+  const TRAIL_LABELS = {1:'Who',2:'What',3:'Where',4:'Stage',5:'When',6:'Anomaly',7:'Scene',8:'Wearing',9:'Objects',10:'Pose'};
+  const TRAIL_ICONS = {1:'group',2:'celebration',3:'storefront',4:'flag',5:'date_range',6:'auto_fix_high',7:'wb_twilight',8:'checkroom',9:'category',10:'face'};
+  const resolvedSecs = new Set();
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function refreshClueCount() {
+    const el = document.getElementById('clue-count');
+    if (el) el.textContent = resolvedSecs.size + ' Clues Anchored';
+  }
+
+  window.handleSelectTile = function(currentSec, label) {
+    // Mark the tapped tile
+    const tapped = window.event && window.event.currentTarget;
+    if (tapped && tapped.parentElement) {
+      Array.prototype.forEach.call(tapped.parentElement.children, function(c) {
+        c.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-surface-container-lowest');
+      });
+      tapped.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-surface-container-lowest');
+    }
+
+    // Update or create the trail chip for this section
+    const chip = document.querySelector('#clue-trail button[onclick="jumpToSection(' + currentSec + ')"]');
+    if (chip) {
+      chip.className = 'shrink-0 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-medium flex items-center gap-1.5 hover:bg-primary-fixed-dim transition-all shadow-xs';
+      chip.innerHTML =
+        '<span class="material-symbols-outlined text-[15px] text-primary">' + (TRAIL_ICONS[currentSec] || 'check') + '</span>' +
+        '<span class="">' + TRAIL_LABELS[currentSec] + ': <strong>' + esc(label) + '</strong></span>' +
+        '<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>';
+    }
+    // Update the section header's resolved-value line if present
+    const summary = document.querySelector('#sec-' + currentSec + ' > button .font-title-lg');
+    if (summary) summary.textContent = label;
+    resolvedSecs.add(currentSec);
+    const st = document.querySelector('#sec-' + currentSec + ' .sec-status');
+    if (st) { st.textContent = 'check'; const c0 = st.parentElement; if (c0) { c0.classList.remove('bg-surface-container','text-on-surface-variant'); c0.classList.add('bg-secondary-fixed','text-secondary'); } }
+    refreshClueCount();
+
+    // Auto-advance to next logical section
+    const nextSec = currentSec < 10 ? currentSec + 1 : 1;
+    window.toggleSection(nextSec);
+    const el = document.getElementById('sec-' + nextSec);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  // Tab support: Utility tab switches to the utility-branch demo entry
+  const tabEpisodic = document.getElementById('tab-episodic');
+  const tabUtility = document.getElementById('tab-utility');
+  if (tabEpisodic && tabUtility) {
+    tabUtility.addEventListener('click', () => {
+      location.href = '../sharma/entry_utility.html';
+    });
+  }
+</script></div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary [&amp;&gt;div]:bg-primary-fixed [&amp;&gt;div]:text-primary"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="photos" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">photo_library</span></div><span class="font-label-md text-label-md font-medium">Photos</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="memories" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><span class="font-label-md text-label-md font-medium">Memories</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="collections" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">folder_copy</span></div><span class="font-label-md text-label-md font-medium">Collections</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="search" href="#"><div class="w-12 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></div><span class="font-label-md text-label-md font-medium">Search</span></a></div></nav>
+
+<button class="bp-toggle" onclick="document.getElementById('bpanel').classList.toggle('bp-open')">How it works</button>
+<aside class="bpanel" id="bpanel">
+<div class="bp-tag">How the backend works</div>
+<h3>1. The system has already tagged every photo with who&rsquo;s in it and roughly when it was taken</h3>
+<p>Before you ever searched, the system had already scanned every photo and recorded things like who appears in it and the approximate time window it was taken in. This happens continuously in the background.</p>
+<p>For this photo, the system had recorded: no one else recognized in frame, and a timestamp falling within a specific, narrow window, since this trip was never repeated.</p>
+<h3>2. You gave two clues: that you were alone, and a rough sense of when</h3>
+<p>You tapped Just Me and a wide, uncertain year range. The system compared these against every photo in your library.</p>
+<h3>3. Only one photo matches both clues, because this moment never repeated</h3>
+<p>Unlike a recurring trip or event, this one only happened once. When the system checked for photos matching &ldquo;alone&rdquo; and that rough time window, it found exactly one, there was no second or third similar photo to compare it against, because nothing like it exists elsewhere in the library.</p>
+<h3>4. The system doesn&rsquo;t force a second or third option that doesn&rsquo;t exist</h3>
+<p>Rather than manufacturing extra candidates just to appear thorough, the system shows exactly what the evidence supports: one confident match, because that&rsquo;s genuinely all there is.</p>
+<p><b>The result:</b> two loose clues were enough to find the one photo that matched, and because nothing else in the library looked like it, the system correctly returned a single confident answer instead of padding the result with unrelated alternatives.</p>
+</aside>
+<a class="rp-cases" href="../index.html">&larr; All cases</a>
+<button class="rp-toggle" onclick="document.getElementById('rpanel').classList.toggle('rp-open')">Script</button>
+<aside class="rpanel" id="rpanel">
+<div class="rp-tag">Reviewer script</div>
+<h2>Case 4: Tokyo layover</h2>
+<div class="rp-label">What you remember</div>
+<p class="rp-quote">&ldquo;One night in Tokyo on a layover, years ago. Shibuya at night, neon everywhere. I’ve never been back. There was nobody with me.&rdquo;</p>
+<div class="rp-label">How the memory gets rebuilt</div>
+<ol><li>Scroll the gallery to fire the prompt, or tap the compass icon.</li>
+<li><b>Who was with you</b> &rarr; tap <b>Just Me</b> (nobody was there).</li>
+<li><b>What was happening</b> &rarr; tap <b>Sightseeing &amp; Wandering</b>.</li>
+<li><b>Where / what vibe</b> &rarr; tap <b>Neon City Streets</b>.</li>
+<li><b>Time and date</b> &rarr; tap <b>2017&ndash;2021</b>.</li>
+<li>The anomaly section reads <b>No recurring pattern detected</b>. Nothing to tap; the absence is the point.</li>
+<li>Tap <b>Open Confident Space</b>: exactly one candidate, <b>1 Confident Match</b>.</li>
+<li>Tap it. Confirm screen shows <b>Gmail-confirmed</b>, the single layover booking.</li></ol>
+<p class="rp-demo"><b>Demonstrates:</b> restraint. A unique context emits one space with no manufactured alternatives. Pair with Case 2: recurring gives three real instances, unique gives one answer.</p>
+<div style="margin-top:14px;padding-top:12px;border-top:1px dashed #e2e8f0"><a href="../index.html" style="font:600 12px system-ui;color:#1a4a8a;text-decoration:none">&larr; Back to all cases</a></div>
+</aside>
+</body></html>

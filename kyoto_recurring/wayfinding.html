@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Roboto+Flex:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#edeeef",
+            "primary-container": "#1a73e8",
+            "on-secondary-fixed-variant": "#005320",
+            "surface-tint": "#005bc0",
+            "surface-bright": "#f8f9fa",
+            "inverse-primary": "#adc7ff",
+            "inverse-on-surface": "#f0f1f2",
+            "surface-dim": "#d9dadb",
+            "error": "#ba1a1a",
+            "outline": "#727785",
+            "on-secondary-fixed": "#002108",
+            "surface-container-low": "#f3f4f5",
+            "surface": "#f8f9fa",
+            "secondary-fixed": "#89fa9b",
+            "on-tertiary-container": "#060021",
+            "on-primary-fixed-variant": "#004493",
+            "tertiary-fixed": "#e8deff",
+            "on-primary-container": "#ffffff",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c1c6d6",
+            "secondary": "#006e2c",
+            "background": "#f8f9fa",
+            "on-surface": "#191c1d",
+            "tertiary": "#6833ea",
+            "on-background": "#191c1d",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#8155ff",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#6ddd81",
+            "primary": "#005bbf",
+            "on-tertiary-fixed-variant": "#4f00d0",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#00722f",
+            "surface-variant": "#e1e3e4",
+            "on-primary-fixed": "#001a41",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e7e8e9",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#20005f",
+            "tertiary-fixed-dim": "#cdbdff",
+            "secondary-container": "#86f898",
+            "primary-fixed": "#d8e2ff",
+            "on-error": "#ffffff",
+            "surface-container-highest": "#e1e3e4",
+            "on-surface-variant": "#414754",
+            "inverse-surface": "#2e3132",
+            "primary-fixed-dim": "#adc7ff"
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "1.75rem",
+            xl: "2.25rem",
+            full: "9999px"
+          },
+          spacing: {
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem"
+          },
+          fontFamily: {
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Roboto Flex"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Roboto Flex"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { width: 100vw; margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(246, 248, 252, 0.85) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .clue-basin-glow {
+      box-shadow: 0 10px 32px -4px rgba(104, 51, 234, 0.18), 0 4px 16px -2px rgba(0, 91, 191, 0.12);
+    }
+  .rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;left:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(-110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
+.bpanel.bp-open{transform:none}
+.bpanel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
+.bpanel h3{font-size:12.5px;font-weight:700;color:#202124;margin:14px 0 4px}
+.bpanel p{margin:0 0 8px}
+.bpanel .bp-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
+.bp-toggle{position:fixed;left:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
+.bp-toggle:hover{background:#1765cc}
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>/* Phone frame: cap the app at mobile width on wide viewports */@media (min-width:480px){html{background:#e8eaed}body{max-width:430px !important;margin:0 auto !important;box-shadow:0 0 48px rgba(0,0,0,0.14);min-height:100vh}.fixed{left:0 !important;right:0 !important;max-width:430px !important;margin-inline:auto !important}}</style><style>
+.rp-toggle{position:fixed;bottom:76px;right:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.rpanel{position:fixed;top:24px;left:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
+.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
+.rpanel h2{font-size:15px;font-weight:700;margin:0 0 10px}
+.rp-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
+.rp-quote{font-size:13px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
+.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:12.5px;line-height:1.55}
+.rpanel ol li{margin-bottom:5px}
+.rpanel ol b{font-weight:600}
+.rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
+@media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
+.rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
+</style></head>
+<body class="bg-[#f8f9fb] font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-fixed">
+<!-- Top Google Photos Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#f8f9fb]/90 backdrop-blur-xl border-b border-surface-container/60 shadow-[0_1px_10px_rgba(0,0,0,0.03)]">
+<div class="h-16 px-gutter flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 flex items-center justify-center relative">
+<!-- Official Google Photos Pinwheel -->
+<div class="grid grid-cols-2 gap-0.5 w-6 h-6 transform rotate-45">
+<span class="w-2.5 h-2.5 rounded-full bg-[#ea4335] shadow-xs"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#4285f4] shadow-xs"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#fbbc05] shadow-xs"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#34a853] shadow-xs"></span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-[1.15rem] tracking-tight text-on-surface font-bold leading-none">Photos</span>
+<span class="px-1.5 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-semibold uppercase tracking-wider">AI</span>
+</div>
+<span class="font-label-md text-xs text-on-surface-variant font-medium leading-none mt-0.5">Memories</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+</div>
+</div>
+</header>
+<!-- Main Scrollable Flow -->
+<main class="flex-1 w-full pt-20 pb-36 px-gutter flex flex-col"><div class="flex flex-col w-full relative select-none">
+<!-- Query & Timeline Wayfinder Breadcrumb Bar -->
+<div class="flex flex-col gap-2 mb-3">
+<!-- Active Clue Header Ribbon -->
+<div class="bg-surface-container-low rounded-lg p-3 flex items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Wayfinder Active</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<!-- FIX: replaced typed/described query sentence with tapped facet chips, matching the entry-point drawer's selections -->
+<div class="flex items-center gap-1 flex-wrap mt-0.5">
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-semibold">Sister</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-semibold">Rangoli</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest px-2.5 py-1 rounded-full flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-primary text-[14px]">grid_view</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">4×4 Dense</span>
+</div>
+</div>
+<!-- Timeline Scrubber Meta -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-on-surface font-bold" id="sp-label">Diwali 2023</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-label-md text-label-md" id="sp-count">22 photos</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant" id="sp-range">November 10–14, 2023</span>
+</div>
+</div>
+<!-- The 4-Column High-Volume Photographic Matrix with Gutters overlayed by SVG Gutter Conduit -->
+<!-- Container is strictly relative to lock pixel-perfect SVG path overlays to grid gutters -->
+<div class="relative w-full rounded-lg overflow-hidden bg-surface-container-lowest p-2 shadow-sm" id="grid-conduit-wrapper">
+<!-- Underlay Dense 4-Column Grid (6 rows = 24 square media cells) -->
+<div class="grid grid-cols-4 gap-2 w-full">
+<!-- ROW 1 (Indices 1 to 4) -->
+<!-- 1,1 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg"/>
+</div>
+<!-- 1,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg"/>
+</div>
+<!-- 1,3 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg"/>
+</div>
+<!-- 1,4 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_Diyas_Lamps.jpg/500px-Diwali_Diyas_Lamps.jpg"/>
+</div>
+<!-- ROW 2 (Indices 5 to 8) -->
+<!-- 2,1 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Floating_diyas_on_Water_Diwali_2011.jpg/500px-Floating_diyas_on_Water_Diwali_2011.jpg"/>
+</div>
+<!-- 2,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Diya_for_Diwali.jpg/500px-Diya_for_Diwali.jpg"/>
+</div>
+<!-- 2,3: CANDIDATE #1 (strongest tier, green) -->
+<div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-1">
+<img class="w-full h-full object-cover" data-alt="Diwali 2023: blue dress with sister, diya in frame" src="diwali_2023.png"/>
+<!-- FIX: removed percentage badge, kept a plain tier-colored checkmark only -->
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-secondary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- 2,4 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Diwali_diya.jpg/500px-Diwali_diya.jpg"/>
+</div>
+<!-- ROW 3 (Indices 9 to 12) -->
+<!-- 3,1: CANDIDATE #2 (secondary tier, blue) -->
+<div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-2">
+<img class="w-full h-full object-cover" data-alt="Diwali 2023: courtyard diya row" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Diya_diwali.jpg/500px-Diya_diwali.jpg"/>
+<!-- FIX: removed percentage badge, tier-colored checkmark (blue, secondary tier) -->
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- 3,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_deepak_%28diya%29.jpg/500px-Diwali_deepak_%28diya%29.jpg"/>
+</div>
+<!-- 3,3 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Diwali_Pooja_Thali_with_Diya_Decoration.jpg/500px-Diwali_Pooja_Thali_with_Diya_Decoration.jpg"/>
+</div>
+<!-- 3,4 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Beautiful_Diya_On_Diwali_Festival.jpg/500px-Beautiful_Diya_On_Diwali_Festival.jpg"/>
+</div>
+<!-- ROW 4 (Indices 13 to 16) -->
+<!-- 4,1 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Diya_Lamp.jpg/500px-Diya_Lamp.jpg"/>
+</div>
+<!-- 4,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg"/>
+</div>
+<!-- 4,3 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Diwali_Diyas_2.jpg/500px-Diwali_Diyas_2.jpg"/>
+</div>
+<!-- 4,4: CANDIDATE #3 (secondary tier, blue) -->
+<div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-3">
+<img class="w-full h-full object-cover" data-alt="Diwali 2023: pooja thali and lamps" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Diwali_Diyas_1.jpg/500px-Diwali_Diyas_1.jpg"/>
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- ROW 5 (Indices 17 to 20) -->
+<!-- 5,1 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Diwali_Diya_in_making.jpg/500px-Diwali_Diya_in_making.jpg"/>
+</div>
+<!-- 5,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diwali_Diya_for_Sale.jpg/500px-Diwali_Diya_for_Sale.jpg"/>
+</div>
+<!-- 5,3 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Diwali_diyas.jpg/500px-Diwali_diyas.jpg"/>
+</div>
+<!-- 5,4 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Diwali_celebration_India.jpg/500px-Diwali_celebration_India.jpg"/>
+</div>
+<!-- ROW 6 (Indices 21 to 24) -->
+<!-- 6,1 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Diwali_Diya.jpg/500px-Diwali_Diya.jpg"/>
+</div>
+<!-- 6,2 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Diwali_Diya.jpg/500px-The_Diwali_Diya.jpg"/>
+</div>
+<!-- 6,3 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg"/>
+</div>
+<!-- 6,4 -->
+<div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg"/>
+</div>
+</div>
+<!-- OVERLAY SVG CONDUIT — UNCHANGED, animations fully preserved -->
+<!--
+      Diagram Analysis (4 columns, normalized coordinates):
+      - Col centers: C0=12.5%, C1=37.5%, C2=62.5%, C3=87.5%
+      - Gutters (inner edges):
+        Gutter 0 (left edge): ~2%
+        Gutter 1 (between C0 & C1): ~25%
+        Gutter 2 (between C1 & C2): ~50%
+        Gutter 3 (between C2 & C3): ~75%
+        Gutter 4 (right edge): ~98%
+      - Row heights (6 rows total, ~16.66% each):
+        Row 0 top: ~1.5%, bottom: ~17.5%
+        Row 1 top: ~18%, bottom: ~34%
+        Row 2 top: ~34.5%, bottom: ~50.5%
+        Row 3 top: ~51%, bottom: ~67%
+        Row 4 top: ~67.5%, bottom: ~83.5%
+        Row 5 top: ~84%, bottom: ~99%
+    -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-20" id="stream-svg" preserveaspectratio="none" viewbox="0 0 400 600">
+<defs>
+<!-- Glowing Filters for Gutter Conduit -->
+<filter height="140%" id="glow-conduit" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="2.5"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<filter height="160%" id="glow-emerald" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="3.5"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<!-- FIX: added a second glow filter for the blue (secondary tier) candidates, same technique as emerald -->
+<filter height="160%" id="glow-blue" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="3.5"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<!-- Linear Gradients for Wayfinding Conduit -->
+<lineargradient id="stream-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#005bbf"></stop>
+<stop offset="50%" stop-color="#1a73e8"></stop>
+<stop offset="100%" stop-color="#006e2c"></stop>
+</lineargradient>
+<lineargradient id="emerald-glow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#89fa9b"></stop>
+<stop offset="50%" stop-color="#006e2c"></stop>
+<stop offset="100%" stop-color="#89fa9b"></stop>
+</lineargradient>
+</defs>
+<!-- 1. Dark Base Track (route generated dynamically from tile layout, see buildStream) -->
+<path d="" fill="none" id="stream-track" opacity="0.85" stroke="#191c1d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<!-- 2. Electric Cyan / Deep Blue Pulsing Wayfinder Core -->
+<path d="" fill="none" filter="url(#glow-conduit)" id="wayfinder-stream" stroke="url(#stream-gradient)" stroke-dasharray="14 8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+<animate attributename="stroke-dashoffset" dur="2s" repeatcount="indefinite" values="44; 0"></animate>
+</path>
+<!-- 3. Animated High-Speed Pulse Photons travelling the Gutter Conduit -->
+<circle fill="#adc7ff" filter="url(#glow-conduit)" r="4">
+<animatemotion dur="4s" id="photon-motion" repeatcount="indefinite"></animatemotion>
+</circle>
+<!-- Candidate perimeter boxes, generated by buildStream() -->
+<g id="candidate-overlays"></g>
+</svg>
+<!-- FIX: Floating tap targets kept for interaction, "Match #" text labels removed, now just a plain directional icon per candidate -->
+<div class="absolute top-[18%] left-[51%] -translate-y-2 z-30 pointer-events-auto">
+<button aria-label="Jump to candidate 1" class="bg-secondary text-on-secondary w-7 h-7 rounded-full shadow-md flex items-center justify-center active:scale-95 transition-transform" onclick="focusCandidate(1)">
+<span class="material-symbols-outlined text-[14px]">arrow_back_ios_new</span>
+</button>
+</div>
+<div class="absolute top-[35%] left-[2%] -translate-y-2 z-30 pointer-events-auto">
+<button aria-label="Jump to candidate 2" class="bg-primary text-on-primary w-7 h-7 rounded-full shadow-md flex items-center justify-center active:scale-95 transition-transform ring-2 ring-surface" onclick="focusCandidate(2)">
+<span class="material-symbols-outlined text-[14px]">arrow_back_ios_new</span>
+</button>
+</div>
+<div class="absolute top-[68%] right-[2%] -translate-y-2 z-30 pointer-events-auto">
+<button aria-label="Jump to candidate 3" class="bg-primary text-on-primary w-7 h-7 rounded-full shadow-md flex items-center justify-center active:scale-95 transition-transform" onclick="focusCandidate(3)">
+<span class="material-symbols-outlined text-[14px]">arrow_back_ios_new</span>
+</button>
+</div>
+</div>
+<!-- Zoom & Grid Density Controller Bar — unchanged, user-controlled per earlier decision -->
+<div class="flex items-center justify-between mt-2.5 px-2 py-1.5 bg-surface-container rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">pinch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pinch to adjust grid density</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-bold px-1.5 text-on-surface">4×4</span>
+<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+<!-- Floating Sticky Stream HUD Controller (Material 3 Elevated Capsule) -->
+<div class="sticky bottom-2 mt-4 z-40 w-full px-1">
+<div class="glass-card clue-basin-glow bg-surface-container-lowest/95 rounded-xl p-3 flex flex-col gap-2.5 shadow-lg">
+<!-- Stream Status Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">route</span>
+<span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-[0.875rem] font-bold text-on-surface" id="candidate-count-hud">Candidate 1 of 3</span>
+<!-- FIX: percentage badge replaced with qualitative tier label -->
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[10px] font-bold" id="candidate-tier-hud">Strong match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="candidate-desc-hud">
+              Blue dress with sister, a diya in frame
+            </p>
+</div>
+</div>
+<!-- Flow State Dot Matrix -->
+<div class="flex items-center gap-1 shrink-0">
+<span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-xs animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+</div>
+</div>
+<!-- Action Stepper & Inspect Drawer Trigger -->
+<div class="flex items-center gap-2 pt-0.5">
+<button aria-label="Previous Match" class="h-10 w-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-transform active:scale-95" onclick="cycleCandidate(-1)">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+<button class="h-10 flex-1 px-4 rounded-full bg-primary hover:bg-primary/90 text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 transition-transform active:scale-98 shadow-sm" onclick="cycleCandidate(1)">
+<span>Jump to Next</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+<button class="h-10 px-4 rounded-full bg-primary-fixed text-on-primary-fixed-variant hover:bg-primary-fixed-dim font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-transform active:scale-95" onclick="openCandidateDrawer()">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">zoom_in</span>
+<span>Inspect</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Slide-Up Inspection Drawer (Toggleable) -->
+<div class="hidden fixed inset-x-0 bottom-16 z-50 p-4 transition-all duration-300" id="inspect-drawer">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</span>
+<span class="font-title-lg text-title-lg font-bold text-on-surface">Candidate Details</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeCandidateDrawer()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" id="inspect-img" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg"/>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-headline-md text-[1rem] font-bold text-on-surface truncate" id="inspect-title">Courtyard with Sister</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="inspect-time">Nov 12, 2023 • 7:42 PM</span>
+<div class="flex flex-wrap gap-1 mt-1" id="inspect-tags">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-md text-[10px] px-2 py-0.5 rounded-full font-semibold">blue dress</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-md text-[10px] px-2 py-0.5 rounded-full font-semibold">friends</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mt-1">
+<button class="flex-1 h-9 rounded-full bg-primary text-on-primary font-label-lg text-xs font-semibold flex items-center justify-center gap-1.5" onclick="openInspected()">
+<span class="material-symbols-outlined text-[16px]">open_in_full</span>
+<span>View Full Resolution</span>
+</button>
+<button class="h-9 px-3 rounded-full bg-surface-container text-on-surface font-label-lg text-xs font-semibold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentCandidate = 1;
+  const totalCandidates = 3;
+
+  // Per-year event spaces: the deck's tap hands off the year via sessionStorage.
+  // Each space anchors on its uploaded photo and fills with year-consistent imagery.
+  var YEAR_SPACES = {
+    "2023": {
+      "label": "Diwali 2023",
+      "count": "22 photos",
+      "range": "November 10–14, 2023",
+      "anchor": "diwali_2023.png",
+      "pool": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_Diyas_Lamps.jpg/500px-Diwali_Diyas_Lamps.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Floating_diyas_on_Water_Diwali_2011.jpg/500px-Floating_diyas_on_Water_Diwali_2011.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Diya_for_Diwali.jpg/500px-Diya_for_Diwali.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Diwali_diya.jpg/500px-Diwali_diya.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Diya_diwali.jpg/500px-Diya_diwali.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_deepak_%28diya%29.jpg/500px-Diwali_deepak_%28diya%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Diwali_Pooja_Thali_with_Diya_Decoration.jpg/500px-Diwali_Pooja_Thali_with_Diya_Decoration.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Beautiful_Diya_On_Diwali_Festival.jpg/500px-Beautiful_Diya_On_Diwali_Festival.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Diya_Lamp.jpg/500px-Diya_Lamp.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Diwali_Diyas_2.jpg/500px-Diwali_Diyas_2.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Diwali_Diyas_1.jpg/500px-Diwali_Diyas_1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Diwali_Diya_in_making.jpg/500px-Diwali_Diya_in_making.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diwali_Diya_for_Sale.jpg/500px-Diwali_Diya_for_Sale.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Diwali_diyas.jpg/500px-Diwali_diyas.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Diwali_Diya.jpg/500px-Diwali_Diya.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Diwali_Diya.jpg/500px-The_Diwali_Diya.jpg"
+      ],
+      "cand": [
+        {
+          "tier": "strong",
+          "desc": "Blue dress with sister, a diya in frame",
+          "title": "blue dress with sister",
+          "time": "Nov 12, 2023 • 7:42 PM",
+          "tags": [
+            "blue dress",
+            "diya",
+            "sister"
+          ],
+          "elementId": "candidate-tile-1"
+        },
+        {
+          "tier": "secondary",
+          "desc": "Diya row along the courtyard steps",
+          "title": "diya row, courtyard steps",
+          "time": "Nov 12, 2023 • 8:40 PM",
+          "tags": [
+            "diya",
+            "courtyard"
+          ],
+          "elementId": "candidate-tile-2"
+        },
+        {
+          "tier": "secondary",
+          "desc": "Pooja thali and lamps, family gathering",
+          "title": "pooja thali with lamps",
+          "time": "Nov 12, 2023 • 9:15 PM",
+          "tags": [
+            "diya",
+            "thali"
+          ],
+          "elementId": "candidate-tile-3"
+        }
+      ]
+    },
+    "2024": {
+      "label": "Diwali 2024",
+      "count": "11 photos",
+      "range": "Oct 31 – Nov 3, 2024",
+      "anchor": "diwali_2024.png",
+      "pool": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Diwali_rangoli_in_goa.jpg/330px-Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Happy_Diwali_rangoli_in_goa.jpg/330px-Happy_Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Home_Diwali_rangoli_in_goa.jpg/330px-Home_Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Lamps_on_rangoli_during_Diwali_festival.jpg/330px-Lamps_on_rangoli_during_Diwali_festival.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rangoli_for_a_diwali_competition.jpg/330px-Rangoli_for_a_diwali_competition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Rangoli_on_Diwali_2020_at_Moga%2C_Punjab%2C_India.jpg/330px-Rangoli_on_Diwali_2020_at_Moga%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Rangoli_design_for_Diwali_on_floor_Chandigarh_Airport._2010.jpg/330px-Rangoli_design_for_Diwali_on_floor_Chandigarh_Airport._2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Rangoli_during_Diwali.jpg/330px-Rangoli_during_Diwali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Rangoli_Making_%28Diwali%29.jpg/330px-Rangoli_Making_%28Diwali%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Rangoli_and_decorations_on_occasion_of_Diwali_celebrations_in_OIL_HR_office_in_2024_01.jpg/330px-Rangoli_and_decorations_on_occasion_of_Diwali_celebrations_in_OIL_HR_office_in_2024_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      ],
+      "cand": [
+        {
+          "tier": "strong",
+          "desc": "Rangoli behind the family gathering",
+          "title": "rangoli in the courtyard",
+          "time": "Nov 1, 2024 • 8:05 PM",
+          "tags": [
+            "rangoli",
+            "courtyard"
+          ],
+          "elementId": "candidate-tile-1"
+        },
+        {
+          "tier": "secondary",
+          "desc": "Floor art before the lamps go up",
+          "title": "rangoli making",
+          "time": "Nov 1, 2024 • 6:20 PM",
+          "tags": [
+            "rangoli"
+          ],
+          "elementId": "candidate-tile-2"
+        },
+        {
+          "tier": "secondary",
+          "desc": "Diyas arranged on the rangoli",
+          "title": "lamps on rangoli",
+          "time": "Nov 1, 2024 • 9:02 PM",
+          "tags": [
+            "rangoli",
+            "diya"
+          ],
+          "elementId": "candidate-tile-3"
+        }
+      ]
+    }
+  };
+  var _sp = null; try { _sp = sessionStorage.getItem('wf-space'); } catch (e) {}
+  var SPACE = YEAR_SPACES[_sp] || YEAR_SPACES['2023'];
+
+  // FIX: percentage "match" field replaced with a qualitative "tier" field (strong | secondary)
+  const candidateData = SPACE ? { 1: SPACE.cand[0], 2: SPACE.cand[1], 3: SPACE.cand[2] } : {
+    1: {
+      tier: "strong",
+      desc: "Blue dress with sister, a diya in frame",
+      title: "Courtyard with Sister",
+      time: "Nov 12, 2023 • 7:42 PM",
+      tags: ["blue dress", "diya", "sister"],
+      elementId: "candidate-tile-1"
+    },
+    2: {
+      tier: "secondary",
+      desc: "Diya row along the courtyard steps",
+      title: "Courtyard Diya Row",
+      time: "Nov 12, 2023 • 8:40 PM",
+      tags: ["diya", "courtyard"],
+      elementId: "candidate-tile-2"
+    },
+    3: {
+      tier: "secondary",
+      desc: "Pooja thali and lamps, family gathering",
+      title: "Pooja Thali Evening",
+      time: "Nov 12, 2023 • 9:15 PM",
+      tags: ["diya", "thali"],
+      elementId: "candidate-tile-3"
+    }
+  };
+
+  function tierClasses(tier) {
+    return tier === "strong"
+      ? ["bg-secondary-fixed", "text-on-secondary-fixed"]
+      : ["bg-primary-fixed", "text-on-primary-fixed-variant"];
+  }
+
+  function focusCandidate(num) {
+    currentCandidate = num;
+    updateHUD();
+    const target = document.getElementById(candidateData[num].elementId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Temporary gentle pulsing highlight
+      target.classList.add('ring-4', 'ring-secondary');
+      setTimeout(() => {
+        target.classList.remove('ring-4', 'ring-secondary');
+      }, 1200);
+    }
+  }
+
+  function cycleCandidate(direction) {
+    currentCandidate += direction;
+    if (currentCandidate > totalCandidates) currentCandidate = 1;
+    if (currentCandidate < 1) currentCandidate = totalCandidates;
+    focusCandidate(currentCandidate);
+  }
+
+  function updateHUD() {
+    const data = candidateData[currentCandidate];
+    const countEl = document.getElementById('candidate-count-hud');
+    const descEl = document.getElementById('candidate-desc-hud');
+    const tierEl = document.getElementById('candidate-tier-hud');
+    if (countEl) countEl.textContent = `Candidate ${currentCandidate} of ${totalCandidates}`;
+    if (descEl) descEl.textContent = data.desc;
+    if (tierEl) {
+      tierEl.textContent = data.tier === "strong" ? "Strong match" : "Possible match";
+      tierEl.className = "px-1.5 py-0.2 rounded-full font-label-md text-[10px] font-bold " + tierClasses(data.tier).join(" ");
+    }
+  }
+
+  function openCandidateDrawer() {
+    const data = candidateData[currentCandidate];
+    const tile = document.getElementById(data.elementId);
+    const tileImg = tile ? tile.querySelector('img') : null;
+    const img = document.getElementById('inspect-img');
+    if (img && tileImg) {
+      img.src = tileImg.src;
+      img.setAttribute('data-alt', tileImg.getAttribute('data-alt') || '');
+    }
+    const titleEl = document.getElementById('inspect-title');
+    if (titleEl) titleEl.textContent = data.title;
+    const timeEl = document.getElementById('inspect-time');
+    if (timeEl) timeEl.textContent = data.time;
+    const tagsEl = document.getElementById('inspect-tags');
+    if (tagsEl) {
+      tagsEl.innerHTML = data.tags.map((tag, i) =>
+        `<span class="${i === 0 ? 'bg-secondary-fixed text-on-secondary-fixed' : 'bg-primary-fixed text-on-primary-fixed-variant'} font-label-md text-[10px] px-2 py-0.5 rounded-full font-semibold">${tag}</span>`
+      ).join('');
+    }
+    const drawer = document.getElementById('inspect-drawer');
+    if (drawer) drawer.classList.remove('hidden');
+  }
+
+  function closeCandidateDrawer() {
+    const drawer = document.getElementById('inspect-drawer');
+    if (drawer) drawer.classList.add('hidden');
+  }
+
+  // Stream path generation — Manhattan/gutter routing through candidates in rank
+  // order, computed from live tile positions (replaces the hand-drawn path).
+  const SVG_W = 400, SVG_H = 600, BOX_PAD = 4;
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  function svgEl(tag, attrs) {
+    const el = document.createElementNS(SVG_NS, tag);
+    for (const k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+
+  function buildStream() {
+    const wrap = document.getElementById('grid-conduit-wrapper');
+    const svg = document.getElementById('stream-svg');
+    const firstTile = wrap ? wrap.querySelector('.grid > div') : null;
+    if (!wrap || !svg || !firstTile) return;
+
+    const wrect = wrap.getBoundingClientRect();
+    const sx = SVG_W / wrect.width, sy = SVG_H / wrect.height;
+    function box(el) {
+      const r = el.getBoundingClientRect();
+      return {
+        x0: (r.left - wrect.left) * sx - BOX_PAD,
+        y0: (r.top - wrect.top) * sy - BOX_PAD,
+        x1: (r.right - wrect.left) * sx + BOX_PAD,
+        y1: (r.bottom - wrect.top) * sy + BOX_PAD
+      };
+    }
+
+    // Candidate boxes in rank order
+    const boxes = [];
+    for (let n = 1; n <= totalCandidates; n++) {
+      const tile = document.getElementById(candidateData[n].elementId);
+      if (tile) boxes.push(box(tile));
+    }
+    if (!boxes.length) return;
+
+    // Start at the first grid cell's top-left gutter, like the original mock
+    const start = box(firstTile);
+    let px = start.x0, py = start.y0;
+    let d = 'M ' + px.toFixed(1) + ',' + py.toFixed(1);
+
+    boxes.forEach(function (b) {
+      const corners = [[b.x0, b.y0], [b.x1, b.y0], [b.x1, b.y1], [b.x0, b.y1]]; // TL,TR,BR,BL
+      // Enter at the corner nearest the pen
+      let best = 0, bd = Infinity;
+      corners.forEach(function (c, i) {
+        const dist = Math.abs(c[0] - px) + Math.abs(c[1] - py);
+        if (dist < bd) { bd = dist; best = i; }
+      });
+      // L-route to the entry corner (horizontal lane, then vertical lane)
+      d += ' L ' + corners[best][0].toFixed(1) + ',' + py.toFixed(1) +
+           ' L ' + corners[best][0].toFixed(1) + ',' + corners[best][1].toFixed(1);
+      // Trace the full perimeter, back to the entry corner
+      for (let k = 1; k <= 4; k++) {
+        const c = corners[(best + k) % 4];
+        d += ' L ' + c[0].toFixed(1) + ',' + c[1].toFixed(1);
+      }
+      px = corners[best][0]; py = corners[best][1];
+    });
+
+    document.getElementById('stream-track').setAttribute('d', d);
+    document.getElementById('wayfinder-stream').setAttribute('d', d);
+    document.getElementById('photon-motion').setAttribute('path', d);
+
+    // Rebuild candidate perimeter overlays (two-tier colors preserved)
+    const g = document.getElementById('candidate-overlays');
+    g.innerHTML = '';
+    boxes.forEach(function (b, i) {
+      const strong = candidateData[i + 1].tier === 'strong';
+      const w = b.x1 - b.x0, h = b.y1 - b.y0;
+      g.appendChild(svgEl('rect', {
+        x: b.x0, y: b.y0, width: w, height: h, rx: 6,
+        fill: strong ? 'rgba(137, 250, 155, 0.08)' : 'rgba(173, 199, 255, 0.10)',
+        filter: strong ? 'url(#glow-emerald)' : 'url(#glow-blue)',
+        stroke: strong ? '#006e2c' : '#005bbf', 'stroke-width': 3
+      }));
+      const dashed = svgEl('rect', {
+        x: b.x0, y: b.y0, width: w, height: h, rx: 6, fill: 'none',
+        stroke: strong ? '#89fa9b' : '#adc7ff',
+        'stroke-dasharray': '8 4', 'stroke-width': 1.5
+      });
+      dashed.appendChild(svgEl('animate', {
+        attributeName: 'stroke-dashoffset', dur: '1.5s',
+        repeatCount: 'indefinite', values: '0; 24'
+      }));
+      g.appendChild(dashed);
+      [[b.x0, b.y0], [b.x1, b.y0], [b.x0, b.y1], [b.x1, b.y1]].forEach(function (c) {
+        g.appendChild(svgEl('circle', {
+          cx: c[0], cy: c[1], r: 3.5,
+          fill: strong ? '#89fa9b' : '#adc7ff'
+        }));
+      });
+    });
+  }
+
+  // Candidate tiles open the confirm screen
+  document.querySelectorAll('[id^="candidate-tile-"]').forEach(function (t) {
+    t.style.cursor = 'pointer';
+    t.addEventListener('click', function () {
+      var img = t.querySelector('img');
+      if (img) {
+        try { sessionStorage.setItem('wf-hero', JSON.stringify({ src: img.src, alt: img.getAttribute('data-alt') || img.alt || '' })); } catch (e) {}
+      }
+      location.href = 'confirm.html';
+    });
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(buildStream, 120);
+  });
+
+
+  function applySpace() {
+    var lbl = document.getElementById('sp-label'); if (lbl) lbl.textContent = SPACE.label;
+    var cnt = document.getElementById('sp-count'); if (cnt) cnt.textContent = SPACE.count;
+    var rng = document.getElementById('sp-range'); if (rng) rng.textContent = SPACE.range;
+    var gridImgs = document.querySelectorAll('#grid-conduit-wrapper img');
+    var i = 3;
+    gridImgs.forEach(function (img) {
+      var tile = img.closest('[id^="candidate-tile-"]');
+      if (tile && tile.id === 'candidate-tile-1') img.src = SPACE.anchor;
+      else if (tile && tile.id === 'candidate-tile-2') img.src = SPACE.pool[0];
+      else if (tile && tile.id === 'candidate-tile-3') img.src = SPACE.pool[1];
+      else img.src = SPACE.pool[i++ % SPACE.pool.length];
+    });
+    var ins = document.getElementById('inspect-img');
+    if (ins) ins.src = SPACE.anchor;
+  }
+  applySpace();
+  updateHUD();
+  buildStream();
+
+  function openInspected() {
+    var img = document.getElementById("inspect-img");
+    if (img) {
+      try { sessionStorage.setItem("wf-hero", JSON.stringify({ src: img.src, alt: img.getAttribute("data-alt") || img.alt || "" })); } catch (e) {}
+    }
+    location.href = "confirm.html";
+  }
+</script></main>
+<!-- Bottom Navigation Bar (Standard Google Photos Material Shell) -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container/60 shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold [&amp;&gt;div]:bg-primary-fixed [&amp;&gt;div]:text-on-primary-fixed-variant">
+<div class="h-16 px-space-sm flex items-center justify-around">
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="photos" href="#">
+<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[22px]">photo_library</span>
+</div>
+<span class="font-label-md text-[11px] text-center leading-none">Photos</span>
+</a>
+<!-- Active: Memories -->
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="memories" href="#">
+<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors relative bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="absolute top-1 right-3.5 w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<span class="font-label-md text-[11px] text-center leading-none font-bold">Memories</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="collections" href="#">
+<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[22px]">folder_copy</span>
+</div>
+<span class="font-label-md text-[11px] text-center leading-none">Collections</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] py-1 text-on-surface-variant hover:text-on-surface transition-all group" data-path="search" href="#">
+<div class="w-14 h-7 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<span class="font-label-md text-[11px] text-center leading-none">Search</span>
+</a>
+</div>
+</nav>
+</main>
+<button class="bp-toggle" onclick="document.getElementById('bpanel').classList.toggle('bp-open')">How it works</button>
+<aside class="bpanel" id="bpanel">
+<div class="bp-tag">How the backend works</div>
+<h3>1. The system has already tagged every photo with who&rsquo;s in it and what objects appear in it</h3>
+<p>Before you ever searched, the system had already scanned every photo and recorded things like who appears in it and what objects or items are visible, a diya, a rangoli, and so on. This happens continuously in the background.</p>
+<p>Two relevant photos exist here: one from 2023, tagged with your sister and a diya. One from 2024, tagged with a rangoli and a group that includes your sister.</p>
+<h3>2. You gave two clues: who you were with, and an object you remembered</h3>
+<p>You tapped Sister and Rangoli. The system compared both clues against your tagged photos.</p>
+<h3>3. One clue was wrong, but the system didn&rsquo;t throw the photo out because of it</h3>
+<p>The 2023 photo matches on &ldquo;Sister&rdquo; but doesn&rsquo;t match &ldquo;Rangoli,&rdquo; it actually has a diya, not a rangoli. A system that required every clue to match perfectly would have excluded this photo entirely because of that one wrong detail.</p>
+<p>Instead, the system weighs clues rather than requiring all of them to match. &ldquo;Sister&rdquo; is a strong, specific match. One mismatched object isn&rsquo;t enough to override that.</p>
+<h3>4. The 2023 photo still comes out on top, with the 2024 photo offered as a close second</h3>
+<p>The 2023 photo ranks highest overall, because matching &ldquo;Sister&rdquo; closely outweighs the one mismatch on &ldquo;Rangoli.&rdquo; The 2024 photo, which does have a rangoli and does include your sister in a group shot, is surfaced right alongside it as a reasonable second option, since it&rsquo;s not an unreasonable guess, just not the strongest match.</p>
+<p><b>The result:</b> even with one confidently wrong detail, the system still found the right photo, because it weighs several clues together instead of demanding a perfect match on every one.</p>
+</aside>
+<a class="rp-cases" href="../index.html">&larr; All cases</a>
+<button class="rp-toggle" onclick="document.getElementById('rpanel').classList.toggle('rp-open')">Script</button>
+<aside class="rpanel" id="rpanel">
+<div class="rp-tag">Reviewer script</div>
+<h2>Case 2: Diwali recurring</h2>
+<div class="rp-label">What you remember</div>
+<p class="rp-quote">&ldquo;Diwali, some year recently. I was with my sister, I think there was a rangoli, but honestly every year looks the same to me.&rdquo;</p>
+<div class="rp-label">How the memory gets rebuilt</div>
+<ol><li>Scroll the gallery to fire the prompt, or tap the compass icon.</li>
+<li><b>Who</b> &rarr; tap <b>Sister</b>.</li>
+<li><b>Objects or details visible</b> &rarr; tap <b>Rangoli</b>. The memory is wrong; that is the point.</li>
+<li>Tap <b>Launch Wayfinding Stream</b>: the deck ranks Diwali 2023 strongest. Sister is a specific match; rangoli matches 2024 instead.</li>
+<li>Tap the 2023 candidate: the grid shows only that year&rsquo;s own photos, diya imagery, zero rangoli. The stream routes to the blue-dress photo.</li>
+<li>Confirm screen shows <b>Attire-confirmed</b>.</li></ol>
+<p class="rp-demo"><b>Demonstrates:</b> a vague memory with one wrong, confidently-stated detail still resolves correctly. The system weighs multiple partial cues; it does not require every one to match.</p>
+<div style="margin-top:14px;padding-top:12px;border-top:1px dashed #e2e8f0"><a href="../index.html" style="font:600 12px system-ui;color:#1a4a8a;text-decoration:none">&larr; Back to all cases</a></div>
+</aside>
+</body></html>
