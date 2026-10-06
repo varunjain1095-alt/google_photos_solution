@@ -107,7 +107,7 @@
 <div class="relative z-10 mt-3 bg-surface-container-lowest rounded-t-[2rem] shadow-[0_-16px_36px_-6px_rgba(25,28,29,0.14)] pt-2 pb-4">
 <div class="w-12 h-1.5 rounded-full bg-surface-variant mx-auto mb-2"></div>
 <div class="px-margin pb-3">
-<div class="flex items-center gap-1 p-1 bg-surface-container rounded-full overflow-x-auto" style="scrollbar-width:none">
+<div id="ribbon-scroll" class="flex items-center gap-1 p-1 bg-surface-container rounded-full overflow-x-auto" style="scrollbar-width:none">
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-primary font-semibold font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(6)">Scene</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Stage</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(5)">When</button>
@@ -117,6 +117,10 @@
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(7)">Wearing</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(8)">Objects</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(9)">Pose</button>
+</div>
+<div class="flex justify-center gap-4 mt-1.5">
+<button onclick="ribbonNav(-1)" class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center active:scale-90 transition-transform" id="rib-left" style="opacity:.35"><span class="material-symbols-outlined text-[16px]">chevron_left</span></button>
+<button onclick="ribbonNav(1)" class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center active:scale-90 transition-transform" id="rib-right"><span class="material-symbols-outlined text-[16px]">chevron_right</span></button>
 </div>
 </div>
 
@@ -533,4 +537,8 @@
 <p class="rp-demo"><b>Demonstrates:</b> partial-cue resolution. Only Who and Time are tapped; What and Where stay a feeling, not a label. The system still finds the photo.</p>
 <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #e2e8f0"><a href="../index.html" style="font:600 12px system-ui;color:#1a4a8a;text-decoration:none">&larr; Back to all cases</a></div>
 </aside>
+<script>
+function ribbonNav(d){var r=document.getElementById("ribbon-scroll");if(!r)return;r.scrollBy({left:d*220,behavior:"smooth"})}
+(function(){var r=document.getElementById("ribbon-scroll");if(!r)return;var L=document.getElementById("rib-left"),R=document.getElementById("rib-right");function upd(){L.style.opacity=r.scrollLeft>8?"1":".35";R.style.opacity=(r.scrollLeft+r.clientWidth<r.scrollWidth-8)?"1":".35"}r.addEventListener("scroll",upd);setTimeout(upd,50)})();
+</script>
 </body></html>
