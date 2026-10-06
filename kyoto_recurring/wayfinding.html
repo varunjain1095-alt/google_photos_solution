@@ -112,13 +112,13 @@
     .clue-basin-glow {
       box-shadow: 0 10px 32px -4px rgba(104, 51, 234, 0.18), 0 4px 16px -2px rgba(0, 91, 191, 0.12);
     }
-  .rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;left:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(-110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
+  .rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;right:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
 .bpanel.bp-open{transform:none}
-.bpanel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
-.bpanel h3{font-size:12.5px;font-weight:700;color:#202124;margin:14px 0 4px}
+.bpanel h2{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
+.bpanel h3{font-size:15px;font-weight:700;color:#202124;margin:14px 0 4px}
 .bpanel p{margin:0 0 8px}
-.bpanel .bp-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
-.bp-toggle{position:fixed;left:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
+.bpanel .bp-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
+.bp-toggle{position:fixed;right:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
 .bp-toggle:hover{background:#1765cc}
 </style>
 <style>
@@ -132,16 +132,16 @@
     }
   </style>
   <style>/* Phone frame: cap the app at mobile width on wide viewports */@media (min-width:480px){html{background:#e8eaed}body{max-width:430px !important;margin:0 auto !important;box-shadow:0 0 48px rgba(0,0,0,0.14);min-height:100vh}.fixed{left:0 !important;right:0 !important;max-width:430px !important;margin-inline:auto !important}}</style><style>
-.rp-toggle{position:fixed;bottom:76px;right:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
-.rpanel{position:fixed;top:24px;left:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
-.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
-.rpanel h2{font-size:15px;font-weight:700;margin:0 0 10px}
-.rp-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
-.rp-quote{font-size:13px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
-.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:12.5px;line-height:1.55}
+.rp-toggle{position:fixed;bottom:76px;left:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.rpanel{position:fixed;top:24px;right:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
+.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
+.rpanel h2{font-size:19px;font-weight:700;margin:0 0 10px}
+.rp-label{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
+.rp-quote{font-size:15px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
+.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:14.5px;line-height:1.55}
 .rpanel ol li{margin-bottom:5px}
 .rpanel ol b{font-weight:600}
-.rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
+.rp-demo{font-size:13px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
 @media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
 .rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
 </style></head>
@@ -215,28 +215,28 @@
 <!-- ROW 1 (Indices 1 to 4) -->
 <!-- 1,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-066-f69d38.jpg"/>
 </div>
 <!-- 1,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-067-7bde7d.jpg"/>
 </div>
 <!-- 1,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-068-fec3f5.jpg"/>
 </div>
 <!-- 1,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_Diyas_Lamps.jpg/500px-Diwali_Diyas_Lamps.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-069-074b10.jpg"/>
 </div>
 <!-- ROW 2 (Indices 5 to 8) -->
 <!-- 2,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Floating_diyas_on_Water_Diwali_2011.jpg/500px-Floating_diyas_on_Water_Diwali_2011.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-070-f01062.jpg"/>
 </div>
 <!-- 2,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Diya_for_Diwali.jpg/500px-Diya_for_Diwali.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-071-6ce01b.jpg"/>
 </div>
 <!-- 2,3: CANDIDATE #1 (strongest tier, green) -->
 <div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-1">
@@ -248,12 +248,12 @@
 </div>
 <!-- 2,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Diwali_diya.jpg/500px-Diwali_diya.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-072-8f9314.jpg"/>
 </div>
 <!-- ROW 3 (Indices 9 to 12) -->
 <!-- 3,1: CANDIDATE #2 (secondary tier, blue) -->
 <div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-2">
-<img class="w-full h-full object-cover" data-alt="Diwali 2023: courtyard diya row" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Diya_diwali.jpg/500px-Diya_diwali.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali 2023: courtyard diya row" src="../assets/img-073-e89071.jpg"/>
 <!-- FIX: removed percentage badge, tier-colored checkmark (blue, secondary tier) -->
 <div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
 <span class="material-symbols-outlined text-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
@@ -261,32 +261,32 @@
 </div>
 <!-- 3,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_deepak_%28diya%29.jpg/500px-Diwali_deepak_%28diya%29.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-074-0568fc.jpg"/>
 </div>
 <!-- 3,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Diwali_Pooja_Thali_with_Diya_Decoration.jpg/500px-Diwali_Pooja_Thali_with_Diya_Decoration.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-075-0e939e.jpg"/>
 </div>
 <!-- 3,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Beautiful_Diya_On_Diwali_Festival.jpg/500px-Beautiful_Diya_On_Diwali_Festival.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-076-5a7334.jpg"/>
 </div>
 <!-- ROW 4 (Indices 13 to 16) -->
 <!-- 4,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Diya_Lamp.jpg/500px-Diya_Lamp.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-077-8a7de7.jpg"/>
 </div>
 <!-- 4,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-078-e97814.jpg"/>
 </div>
 <!-- 4,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Diwali_Diyas_2.jpg/500px-Diwali_Diyas_2.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-079-00ac58.jpg"/>
 </div>
 <!-- 4,4: CANDIDATE #3 (secondary tier, blue) -->
 <div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-3">
-<img class="w-full h-full object-cover" data-alt="Diwali 2023: pooja thali and lamps" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Diwali_Diyas_1.jpg/500px-Diwali_Diyas_1.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali 2023: pooja thali and lamps" src="../assets/img-080-781678.jpg"/>
 <div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
 <span class="material-symbols-outlined text-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
 </div>
@@ -294,36 +294,36 @@
 <!-- ROW 5 (Indices 17 to 20) -->
 <!-- 5,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Diwali_Diya_in_making.jpg/500px-Diwali_Diya_in_making.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-081-94e21c.jpg"/>
 </div>
 <!-- 5,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diwali_Diya_for_Sale.jpg/500px-Diwali_Diya_for_Sale.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-082-9369d5.jpg"/>
 </div>
 <!-- 5,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Diwali_diyas.jpg/500px-Diwali_diyas.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-083-183ca6.jpg"/>
 </div>
 <!-- 5,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Diwali_celebration_India.jpg/500px-Diwali_celebration_India.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-084-04ee08.jpg"/>
 </div>
 <!-- ROW 6 (Indices 21 to 24) -->
 <!-- 6,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Diwali_Diya.jpg/500px-Diwali_Diya.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-085-80e117.jpg"/>
 </div>
 <!-- 6,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Diwali_Diya.jpg/500px-The_Diwali_Diya.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-086-f27484.jpg"/>
 </div>
 <!-- 6,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-066-f69d38.jpg"/>
 </div>
 <!-- 6,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg"/>
+<img class="w-full h-full object-cover" data-alt="Diwali celebration photo" src="../assets/img-067-7bde7d.jpg"/>
 </div>
 </div>
 <!-- OVERLAY SVG CONDUIT — UNCHANGED, animations fully preserved -->
@@ -411,22 +411,6 @@
 </button>
 </div>
 </div>
-<!-- Zoom & Grid Density Controller Bar — unchanged, user-controlled per earlier decision -->
-<div class="flex items-center justify-between mt-2.5 px-2 py-1.5 bg-surface-container rounded-lg">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-on-surface-variant text-[16px]">pinch</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Pinch to adjust grid density</span>
-</div>
-<div class="flex items-center gap-1">
-<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
-<span class="material-symbols-outlined text-[14px]">remove</span>
-</button>
-<span class="font-label-md text-label-md font-bold px-1.5 text-on-surface">4×4</span>
-<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
-<span class="material-symbols-outlined text-[14px]">add</span>
-</button>
-</div>
-</div>
 <!-- Floating Sticky Stream HUD Controller (Material 3 Elevated Capsule) -->
 <div class="sticky bottom-2 mt-4 z-40 w-full px-1">
 <div class="glass-card clue-basin-glow bg-surface-container-lowest/95 rounded-xl p-3 flex flex-col gap-2.5 shadow-lg">
@@ -486,7 +470,7 @@
 </div>
 <div class="flex gap-3 items-center">
 <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 shadow-sm">
-<img class="w-full h-full object-cover" id="inspect-img" data-alt="Diwali celebration photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg"/>
+<img class="w-full h-full object-cover" id="inspect-img" data-alt="Diwali celebration photo" src="../assets/img-068-fec3f5.jpg"/>
 </div>
 <div class="flex flex-col gap-1 min-w-0">
 <span class="font-headline-md text-[1rem] font-bold text-on-surface truncate" id="inspect-title">Courtyard with Sister</span>
@@ -522,26 +506,26 @@
       "range": "November 10–14, 2023",
       "anchor": "diwali_2023.png",
       "pool": [
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Happy_Diwali_-_Festival_of_light.jpg/500px-Happy_Diwali_-_Festival_of_light.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Diyas_Diwali_Decor_India.jpg/500px-Diyas_Diwali_Decor_India.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_Diyas_Lamps.jpg/500px-Diwali_Diyas_Lamps.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Floating_diyas_on_Water_Diwali_2011.jpg/500px-Floating_diyas_on_Water_Diwali_2011.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Diya_for_Diwali.jpg/500px-Diya_for_Diwali.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Diwali_diya.jpg/500px-Diwali_diya.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Diya_diwali.jpg/500px-Diya_diwali.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Diwali_deepak_%28diya%29.jpg/500px-Diwali_deepak_%28diya%29.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Diwali_Pooja_Thali_with_Diya_Decoration.jpg/500px-Diwali_Pooja_Thali_with_Diya_Decoration.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Beautiful_Diya_On_Diwali_Festival.jpg/500px-Beautiful_Diya_On_Diwali_Festival.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Diya_Lamp.jpg/500px-Diya_Lamp.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Diwali_Diyas_2.jpg/500px-Diwali_Diyas_2.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Diwali_Diyas_1.jpg/500px-Diwali_Diyas_1.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Diwali_Diya_in_making.jpg/500px-Diwali_Diya_in_making.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diwali_Diya_for_Sale.jpg/500px-Diwali_Diya_for_Sale.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Diwali_diyas.jpg/500px-Diwali_diyas.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Diwali_Diya.jpg/500px-Diwali_Diya.jpg",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/The_Diwali_Diya.jpg/500px-The_Diwali_Diya.jpg"
+        "../assets/img-225-f69d38.jpg",
+        "../assets/img-220-7bde7d.jpg",
+        "../assets/img-221-fec3f5.jpg",
+        "../assets/img-222-074b10.jpg",
+        "../assets/img-223-f01062.jpg",
+        "../assets/img-224-6ce01b.jpg",
+        "../assets/img-226-8f9314.jpg",
+        "../assets/img-227-e89071.jpg",
+        "../assets/img-228-0568fc.jpg",
+        "../assets/img-229-0e939e.jpg",
+        "../assets/img-230-5a7334.jpg",
+        "../assets/img-231-8a7de7.jpg",
+        "../assets/img-232-e97814.jpg",
+        "../assets/img-233-00ac58.jpg",
+        "../assets/img-234-781678.jpg",
+        "../assets/img-235-94e21c.jpg",
+        "../assets/img-236-9369d5.jpg",
+        "../assets/img-237-183ca6.jpg",
+        "../assets/img-238-80e117.jpg",
+        "../assets/img-239-f27484.jpg"
       ],
       "cand": [
         {
@@ -586,16 +570,16 @@
       "range": "Oct 31 – Nov 3, 2024",
       "anchor": "diwali_2024.png",
       "pool": [
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Diwali_rangoli_in_goa.jpg/330px-Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Happy_Diwali_rangoli_in_goa.jpg/330px-Happy_Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Home_Diwali_rangoli_in_goa.jpg/330px-Home_Diwali_rangoli_in_goa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Lamps_on_rangoli_during_Diwali_festival.jpg/330px-Lamps_on_rangoli_during_Diwali_festival.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rangoli_for_a_diwali_competition.jpg/330px-Rangoli_for_a_diwali_competition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Rangoli_on_Diwali_2020_at_Moga%2C_Punjab%2C_India.jpg/330px-Rangoli_on_Diwali_2020_at_Moga%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Rangoli_design_for_Diwali_on_floor_Chandigarh_Airport._2010.jpg/330px-Rangoli_design_for_Diwali_on_floor_Chandigarh_Airport._2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Rangoli_during_Diwali.jpg/330px-Rangoli_during_Diwali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Rangoli_Making_%28Diwali%29.jpg/330px-Rangoli_Making_%28Diwali%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Rangoli_and_decorations_on_occasion_of_Diwali_celebrations_in_OIL_HR_office_in_2024_01.jpg/330px-Rangoli_and_decorations_on_occasion_of_Diwali_celebrations_in_OIL_HR_office_in_2024_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        "../assets/img-240-23f55f.jpg",
+        "../assets/img-241-b36161.jpg",
+        "../assets/img-242-9327bf.jpg",
+        "../assets/img-243-b453e5.jpg",
+        "../assets/img-244-21dc52.jpg",
+        "../assets/img-245-e959df.jpg",
+        "../assets/img-246-8e31c3.jpg",
+        "../assets/img-247-ea8458.jpg",
+        "../assets/img-248-1f7530.jpg",
+        "../assets/img-249-35d5c5.jpg"
       ],
       "cand": [
         {

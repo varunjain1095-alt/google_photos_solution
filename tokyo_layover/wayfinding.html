@@ -112,13 +112,13 @@
     .clue-basin-glow {
       box-shadow: 0 10px 32px -4px rgba(104, 51, 234, 0.18), 0 4px 16px -2px rgba(0, 91, 191, 0.12);
     }
-  .rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;left:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(-110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
+  .rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;right:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
 .bpanel.bp-open{transform:none}
-.bpanel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
-.bpanel h3{font-size:12.5px;font-weight:700;color:#202124;margin:14px 0 4px}
+.bpanel h2{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
+.bpanel h3{font-size:15px;font-weight:700;color:#202124;margin:14px 0 4px}
 .bpanel p{margin:0 0 8px}
-.bpanel .bp-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
-.bp-toggle{position:fixed;left:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
+.bpanel .bp-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
+.bp-toggle{position:fixed;right:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
 .bp-toggle:hover{background:#1765cc}
 </style>
 <style>
@@ -132,16 +132,16 @@
     }
   </style>
   <style>/* Phone frame: cap the app at mobile width on wide viewports */@media (min-width:480px){html{background:#e8eaed}body{max-width:430px !important;margin:0 auto !important;box-shadow:0 0 48px rgba(0,0,0,0.14);min-height:100vh}.fixed{left:0 !important;right:0 !important;max-width:430px !important;margin-inline:auto !important}}</style><style>
-.rp-toggle{position:fixed;bottom:76px;right:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
-.rpanel{position:fixed;top:24px;left:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
-.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
-.rpanel h2{font-size:15px;font-weight:700;margin:0 0 10px}
-.rp-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
-.rp-quote{font-size:13px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
-.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:12.5px;line-height:1.55}
+.rp-toggle{position:fixed;bottom:76px;left:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.rpanel{position:fixed;top:24px;right:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
+.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
+.rpanel h2{font-size:19px;font-weight:700;margin:0 0 10px}
+.rp-label{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
+.rp-quote{font-size:15px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
+.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:14.5px;line-height:1.55}
 .rpanel ol li{margin-bottom:5px}
 .rpanel ol b{font-weight:600}
-.rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
+.rp-demo{font-size:13px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
 @media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
 .rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
 </style></head>
@@ -217,58 +217,58 @@
 <!-- ROW 1 (Indices 1 to 4) -->
 <!-- 1,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared1/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-001-3130da.jpg"/>
 </div>
 <!-- 1,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://foodish-api.com/images/dosa/dosa2.jpg"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-002-480156.jpg"/>
 </div>
 <!-- 1,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Lamarckia_aurea20150524_3247.jpg/330px-Lamarckia_aurea20150524_3247.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-003-ee6795.jpg"/>
 </div>
 <!-- 1,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Scanned_Document-2-10.jpg/330px-Scanned_Document-2-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-004-22f885.jpg"/>
 </div>
 <!-- ROW 2 (Indices 5 to 8) -->
 <!-- 2,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared2/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-005-7d0c24.jpg"/>
 </div>
 <!-- 2,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Shibuya_Crossing_at_night_%2814738088849%29.jpg/330px-Shibuya_Crossing_at_night_%2814738088849%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-087-0c82f6.jpg"/>
 </div>
 <!-- 2,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared8/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-007-bfda8d.jpg"/>
 </div>
 <!-- 2,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared3/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-008-bb1a75.jpg"/>
 </div>
 <!-- ROW 3 (Indices 9 to 12) -->
 <!-- 3,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://foodish-api.com/images/pizza/pizza5.jpg"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-009-ace11d.jpg"/>
 </div>
 <!-- 3,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Prohibition_prescription_front.jpg/330px-Prohibition_prescription_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-010-f6270f.jpg"/>
 </div>
 <!-- 3,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Houseplants_in_Michigan.jpg/330px-Houseplants_in_Michigan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-011-27c0a1.jpg"/>
 </div>
 <!-- 3,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Original_Red_Velvet_Recipe_Card.jpg/330px-Original_Red_Velvet_Recipe_Card.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-012-e190f9.jpg"/>
 </div>
 <!-- ROW 4 (Indices 13 to 16) -->
 <!-- 4,1: CANDIDATE #1 (strongest tier, green) — the single confident match -->
 <div class="relative aspect-square rounded overflow-hidden shadow-md z-10 transition-transform duration-300 transform scale-[1.03]" id="candidate-tile-1">
-<img class="w-full h-full object-cover" data-alt="Shibuya crossing at night, neon lights and crowds, Tokyo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Shibuya_Crossing_at_night.jpg/330px-Shibuya_Crossing_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="Shibuya crossing at night, neon lights and crowds, Tokyo" src="../assets/img-088-e48fb0.jpg"/>
 <!-- Plain tier-colored checkmark, no percentage -->
 <div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
 <span class="material-symbols-outlined text-secondary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
@@ -276,49 +276,49 @@
 </div>
 <!-- 4,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared4/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-013-9b3e78.jpg"/>
 </div>
 <!-- 4,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Screenshot_20210813-185851_Instagram.jpg/330px-Screenshot_20210813-185851_Instagram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-014-94fa1b.jpg"/>
 </div>
 <!-- 4,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://foodish-api.com/images/idly/idly9.jpg"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-015-76378c.jpg"/>
 </div>
 <!-- ROW 5 (Indices 17 to 20) -->
 <!-- 5,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://foodish-api.com/images/biryani/biryani3.jpg"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-016-5b4b04.jpg"/>
 </div>
 <!-- 5,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared5/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-017-792da7.jpg"/>
 </div>
 <!-- 5,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/330px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-089-030397.jpg"/>
 </div>
 <!-- 5,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Scanned_Document-2-12.jpg/330px-Scanned_Document-2-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-019-d244cb.jpg"/>
 </div>
 <!-- ROW 6 (Indices 21 to 24) -->
 <!-- 6,1 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared6/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-020-92bd32.jpg"/>
 </div>
 <!-- 6,2 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Prescription_Sigmund_Freud.jpg/330px-Prescription_Sigmund_Freud.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-021-de4049.jpg"/>
 </div>
 <!-- 6,3 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://foodish-api.com/images/pasta/pasta7.jpg"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-022-acac5e.jpg"/>
 </div>
 <!-- 6,4 -->
 <div class="relative aspect-square rounded overflow-hidden bg-surface-container transition-opacity duration-300 opacity-60">
-<img class="w-full h-full object-cover" data-alt="" src="https://picsum.photos/seed/shared9/200/200"/>
+<img class="w-full h-full object-cover" data-alt="" src="../assets/img-023-44ca37.jpg"/>
 </div>
 </div>
 <!-- OVERLAY SVG CONDUIT — UNCHANGED, animations fully preserved -->
@@ -396,22 +396,6 @@
 </button>
 </div>
 </div>
-<!-- Zoom & Grid Density Controller Bar — unchanged, user-controlled per earlier decision -->
-<div class="flex items-center justify-between mt-2.5 px-2 py-1.5 bg-surface-container rounded-lg">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-on-surface-variant text-[16px]">pinch</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Pinch to adjust grid density</span>
-</div>
-<div class="flex items-center gap-1">
-<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
-<span class="material-symbols-outlined text-[14px]">remove</span>
-</button>
-<span class="font-label-md text-label-md font-bold px-1.5 text-on-surface">4×4</span>
-<button class="w-6 h-6 rounded-full bg-surface text-on-surface-variant flex items-center justify-center shadow-xs">
-<span class="material-symbols-outlined text-[14px]">add</span>
-</button>
-</div>
-</div>
 <!-- Floating Sticky Stream HUD Controller (Material 3 Elevated Capsule) -->
 <div class="sticky bottom-2 mt-4 z-40 w-full px-1">
 <div class="glass-card clue-basin-glow bg-surface-container-lowest/95 rounded-xl p-3 flex flex-col gap-2.5 shadow-lg">
@@ -468,7 +452,7 @@
 </div>
 <div class="flex gap-3 items-center">
 <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 shadow-sm">
-<img class="w-full h-full object-cover" id="inspect-img" data-alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Screenshot_20211013-204733_Instagram%281%29.jpg/330px-Screenshot_20211013-204733_Instagram%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"/>
+<img class="w-full h-full object-cover" id="inspect-img" data-alt="" src="../assets/img-024-fb9e8d.jpg"/>
 </div>
 <div class="flex flex-col gap-1 min-w-0">
 <span class="font-headline-md text-[1rem] font-bold text-on-surface truncate" id="inspect-title">Shibuya Crossing at Night</span>

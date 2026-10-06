@@ -1,14 +1,36 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Roboto+Flex:wght@400;500&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8f9fa;color:#191c1d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;left:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(-110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8f9fa;color:#191c1d;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.pad{position:relative;display:flex;width:100%;min-width:0;overflow:hidden;box-sizing:border-box;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:12px;border:0;border-radius:2rem;min-height:7.75rem;text-align:center;transition:transform .15s,box-shadow .15s;box-shadow:0 5px 0 #b0bec5,0 8px 12px -4px rgba(0,0,0,.08);cursor:pointer}
+.pad:active{transform:translateY(4px);box-shadow:0 2px 0 #90a4ae,inset 0 2px 4px rgba(255,255,255,.5)}
+.pad .pad-ic{font-size:32px;line-height:1;margin-bottom:2px}
+.pad .pad-lb{overflow-wrap:break-word;word-break:break-word;max-width:100%;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:center;line-height:1.25}
+.pad .pad-sub{font-size:12px;font-weight:600;opacity:.9;margin-top:2px;font-weight:500;opacity:.75;text-align:center;line-height:1.2}
+.pad.pad-on{transform:translateY(4px);box-shadow:0 2px 0 #90a4ae,inset 0 2px 4px rgba(255,255,255,.5);outline:3px solid rgba(104,51,234,.35);outline-offset:2px}
+.pad-0{background:linear-gradient(135deg,#a7f3d0,#34d399)}.pad-0 .pad-ic,.pad-0 .pad-lb{color:#064e3b}.pad-0 .pad-sub{color:#065f46}
+.pad-1{background:linear-gradient(135deg,#fbcfe8,#f472b6)}.pad-1 .pad-ic,.pad-1 .pad-lb{color:#831843}.pad-1 .pad-sub{color:#9d174d}
+.pad-2{background:linear-gradient(135deg,#e0e7ff,#a5b4fc)}.pad-2 .pad-ic,.pad-2 .pad-lb{color:#312e81}.pad-2 .pad-sub{color:#3730a3}
+.pad-3{background:linear-gradient(135deg,#ffd54f,#ff8a65)}.pad-3 .pad-ic,.pad-3 .pad-lb{color:#4e342e}.pad-3 .pad-sub{color:#6d4c41}
+.pad-4{background:linear-gradient(135deg,#ffcc80,#ffab91)}.pad-4 .pad-ic,.pad-4 .pad-lb{color:#4e342e}.pad-4 .pad-sub{color:#5d4037}
+.pad-5{background:linear-gradient(135deg,#fed7aa,#fb923c)}.pad-5 .pad-ic,.pad-5 .pad-lb{color:#7c2d12}.pad-5 .pad-sub{color:#9a3412}
+.pad-6{background:linear-gradient(135deg,#d9f99d,#a3e635)}.pad-6 .pad-ic,.pad-6 .pad-lb{color:#365314}.pad-6 .pad-sub{color:#3f6212}
+.pad-7{background:linear-gradient(135deg,#bae6fd,#38bdf8)}.pad-7 .pad-ic,.pad-7 .pad-lb{color:#0c4a6e}.pad-7 .pad-sub{color:#075985}.rp-cases{position:fixed;top:14px;left:14px;z-index:999;font:600 12px system-ui;color:#334155;background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);display:inline-flex;align-items:center;gap:5px}.rp-cases:hover{background:#f1f5f9}@media (min-width:1090px){.rp-cases{top:20px;left:20px}}.bpanel{position:fixed;right:14px;top:64px;bottom:60px;width:340px;max-width:88vw;background:#fff;border:1px solid #e3e7ee;border-radius:14px;box-shadow:0 12px 40px rgba(15,23,42,.18);padding:18px 20px;overflow-y:auto;z-index:80;transform:translateX(110%);transition:transform .25s ease;font-size:12.5px;line-height:1.6;color:#3c4043}
 .bpanel.bp-open{transform:none}
-.bpanel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
-.bpanel h3{font-size:12.5px;font-weight:700;color:#202124;margin:14px 0 4px}
+.bpanel h2{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a73e8;margin:0 0 10px}
+.bpanel h3{font-size:15px;font-weight:700;color:#202124;margin:14px 0 4px}
 .bpanel p{margin:0 0 8px}
-.bpanel .bp-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
-.bp-toggle{position:fixed;left:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
+.bpanel .bp-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.8px;color:#1a73e8;background:#e8f0fe;border-radius:6px;padding:2px 7px;margin-bottom:10px;text-transform:uppercase}
+.bp-toggle{position:fixed;right:14px;bottom:16px;z-index:81;background:#1a73e8;color:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 12px system-ui;box-shadow:0 4px 14px rgba(26,115,232,.35);cursor:pointer}
 .bp-toggle:hover{background:#1765cc}
-</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9fa","surface-variant":"#e1e3e4","outline":"#727785","surface-container":"#edeeef","on-primary":"#ffffff","on-surface":"#191c1d","tertiary-container":"#8155ff","on-secondary-fixed-variant":"#005320","on-secondary-fixed":"#002108","primary":"#005bbf","surface-container-highest":"#e1e3e4","on-secondary":"#ffffff","on-primary-fixed":"#001a41","inverse-on-surface":"#f0f1f2","tertiary":"#6833ea","on-error-container":"#93000a","on-tertiary-container":"#060021","error":"#ba1a1a","inverse-surface":"#2e3132","on-background":"#191c1d","surface-container-low":"#f3f4f5","secondary":"#006e2c","secondary-fixed":"#89fa9b","surface-container-lowest":"#ffffff","surface-tint":"#005bc0","surface-dim":"#d9dadb","primary-fixed":"#d8e2ff","error-container":"#ffdad6","on-error":"#ffffff","outline-variant":"#c1c6d6","secondary-container":"#86f898","on-secondary-container":"#00722f","surface-container-high":"#e7e8e9","inverse-primary":"#adc7ff","on-primary-fixed-variant":"#004493","on-tertiary":"#ffffff","on-tertiary-fixed":"#20005f","background":"#f8f9fa","tertiary-fixed-dim":"#cdbdff","on-primary-container":"#ffffff","secondary-fixed-dim":"#6ddd81","on-tertiary-fixed-variant":"#4f00d0","surface-bright":"#f8f9fa","primary-container":"#1a73e8","primary-fixed-dim":"#adc7ff","tertiary-fixed":"#e8deff","on-surface-variant":"#414754"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-tablet":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","gutter":"1rem","margin-desktop":"2.5rem","margin-tablet":"1.5rem","space-xl":"2rem"},"fontFamily":{"body-lg":["Roboto Flex"],"body-md":["Roboto Flex"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Roboto Flex"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Roboto Flex"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Roboto Flex"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.015em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"400"}],"title-lg":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg-mobile":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"500"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><style>
+</style><script src="https://cdn.tailwindcss.com">  window.datePicked=function(){
+    const body=document.querySelector('.usec-body-3');
+    document.querySelectorAll('.usec-body-3 .uchip').forEach(c=>c.classList.remove('pad-on'));
+    window._dp=true;
+    const ra=document.getElementById('res-anchors');
+    if(ra)ra.textContent=document.querySelectorAll('.uchip.pad-on').length+1;
+    markResolved(3);
+  };
+</script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9fa","surface-variant":"#e1e3e4","outline":"#727785","surface-container":"#edeeef","on-primary":"#ffffff","on-surface":"#191c1d","tertiary-container":"#8155ff","on-secondary-fixed-variant":"#005320","on-secondary-fixed":"#002108","primary":"#005bbf","surface-container-highest":"#e1e3e4","on-secondary":"#ffffff","on-primary-fixed":"#001a41","inverse-on-surface":"#f0f1f2","tertiary":"#6833ea","on-error-container":"#93000a","on-tertiary-container":"#060021","error":"#ba1a1a","inverse-surface":"#2e3132","on-background":"#191c1d","surface-container-low":"#f3f4f5","secondary":"#006e2c","secondary-fixed":"#89fa9b","surface-container-lowest":"#ffffff","surface-tint":"#005bc0","surface-dim":"#d9dadb","primary-fixed":"#d8e2ff","error-container":"#ffdad6","on-error":"#ffffff","outline-variant":"#c1c6d6","secondary-container":"#86f898","on-secondary-container":"#00722f","surface-container-high":"#e7e8e9","inverse-primary":"#adc7ff","on-primary-fixed-variant":"#004493","on-tertiary":"#ffffff","on-tertiary-fixed":"#20005f","background":"#f8f9fa","tertiary-fixed-dim":"#cdbdff","on-primary-container":"#ffffff","secondary-fixed-dim":"#6ddd81","on-tertiary-fixed-variant":"#4f00d0","surface-bright":"#f8f9fa","primary-container":"#1a73e8","primary-fixed-dim":"#adc7ff","tertiary-fixed":"#e8deff","on-surface-variant":"#414754"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-tablet":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","gutter":"1rem","margin-desktop":"2.5rem","margin-tablet":"1.5rem","space-xl":"2rem"},"fontFamily":{"body-lg":["Roboto Flex"],"body-md":["Roboto Flex"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Roboto Flex"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Roboto Flex"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Roboto Flex"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.015em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"400"}],"title-lg":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg-mobile":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"500"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><style>
     body {
       min-height: max(884px, 100dvh);
     }
@@ -19,16 +41,16 @@
     }
   </style>
 <style>/* Phone frame: cap the app at mobile width on wide viewports */@media (min-width:480px){html{background:#e8eaed}body{max-width:430px !important;margin:0 auto !important;box-shadow:0 0 48px rgba(0,0,0,0.14);min-height:100vh}.fixed{left:0 !important;right:0 !important;max-width:430px !important;margin-inline:auto !important}}</style><style>
-.rp-toggle{position:fixed;bottom:76px;right:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
-.rpanel{position:fixed;top:24px;left:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
-.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
-.rpanel h2{font-size:15px;font-weight:700;margin:0 0 10px}
-.rp-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
-.rp-quote{font-size:13px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
-.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:12.5px;line-height:1.55}
+.rp-toggle{position:fixed;bottom:76px;left:14px;z-index:60;background:#191c1d;color:#fff;border:none;border-radius:999px;padding:8px 14px;font:600 12px 'Google Sans Text',sans-serif;letter-spacing:.02em;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.rpanel{position:fixed;top:24px;right:calc(50% + 235px);width:322px;z-index:55;background:#fff;border:1px dashed #b3b7c0;border-radius:16px;padding:18px 18px 14px;box-shadow:0 8px 32px rgba(0,0,0,.10);font-family:'Google Sans Text',sans-serif;color:#1f1f1f;display:none}
+.rp-tag{display:inline-block;background:#eef3fb;color:#0b57d0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 7px;margin-bottom:8px}
+.rpanel h2{font-size:19px;font-weight:700;margin:0 0 10px}
+.rp-label{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#444746;margin-bottom:4px}
+.rp-quote{font-size:15px;line-height:1.5;font-style:italic;color:#333;border-left:3px solid #d3e3fd;padding-left:10px;margin:0 0 12px}
+.rpanel ol{margin:0 0 10px;padding-left:18px;font-size:14.5px;line-height:1.55}
 .rpanel ol li{margin-bottom:5px}
 .rpanel ol b{font-weight:600}
-.rp-demo{font-size:11.5px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
+.rp-demo{font-size:13px;line-height:1.5;color:#5f6368;border-top:1px solid #eceff3;padding-top:8px;margin:0}
 @media(min-width:1090px){.rpanel{display:block}.rp-toggle{display:none}}
 .rpanel.rp-open{display:block;top:auto;bottom:64px;left:14px;right:14px;width:auto;max-height:72vh;overflow-y:auto}
 </style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed" style="background-color: #f8f9fa !important; color: #191c1d !important; opacity: 1 !important; visibility: visible !important; min-height: 100vh; overflow-y: auto;"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">filter_vintage</span><span class="font-title-lg text-title-lg font-semibold tracking-tight text-on-surface">Photos</span></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface" style="background-color: #f8f9fa !important; opacity: 1 !important; visibility: visible !important;"><div class="flex flex-col w-full px-margin pb-10 space-y-space-lg select-none"><!-- Top Mode Switch Bar -->
@@ -56,272 +78,95 @@
       Scanning document text and visual clues…
     </p>
 </div>
-<!-- Progressive Reveal: Persistent Trail Bar -->
-<div class="space-y-space-xs">
-<div class="flex items-center justify-between text-on-surface-variant px-space-xs"><span class="font-label-md text-label-md font-semibold uppercase tracking-wide">Persistent Clue Trail (Tap to edit):</span><span class="font-body-sm text-body-sm text-primary font-medium">3 clues active</span></div>
-<div class="flex gap-space-xs overflow-x-auto pb-1 no-scrollbar">
-<button class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold shrink-0 shadow-sm flex items-center gap-1.5 active:scale-95 transition-all">
-<span class="">Type: Prescriptions</span>
-<span class="material-symbols-outlined text-[16px]">check</span>
-</button>
-<button class="px-space-md py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-semibold shrink-0 shadow-sm flex items-center gap-1.5 active:scale-95 transition-all">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">Material: White Paper &amp; Ink</span>
-<span class="material-symbols-outlined text-[16px]">check</span>
-</button>
-<button class="px-space-md py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md font-semibold shrink-0 shadow-sm flex items-center gap-1.5 active:scale-95 transition-all">
-<span class="">Horizon: Earlier 2024</span>
-<span class="material-symbols-outlined text-[16px]">check</span>
-</button>
+<div class="grid grid-cols-3 gap-2 px-margin pt-6 opacity-40 blur-[1px]"><img src="../assets/img-001-3130da.jpg" class="w-full h-24 object-cover rounded-xl" alt=""><img src="../assets/img-002-480156.jpg" class="w-full h-24 object-cover rounded-xl" alt=""><img src="../assets/img-003-ee6795.jpg" class="w-full h-24 object-cover rounded-xl" alt=""></div>
+<div class="relative z-10 mt-3 bg-surface-container-lowest rounded-t-[2rem] shadow-[0_-8px_30px_rgba(0,0,0,0.08)] pt-3">
+<div class="mx-auto w-10 h-1.5 rounded-full bg-outline-variant mb-3"></div>
+<!-- Ribbon -->
+<div class="px-margin pb-3">
+<div class="flex items-center gap-1 p-1 bg-surface-container rounded-full overflow-x-auto" style="scrollbar-width:none">
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-primary font-semibold font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(1)">Docs</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(2)">Visuals</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(3)">Date</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Origin</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(5)">Frequency</button>
 </div>
 </div>
-<!-- Resonance Status Strip -->
-<div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between shadow-sm">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
-<span class="material-symbols-outlined text-[20px]">graphic_eq</span>
-</div>
-<div class="min-w-0">
-<p class="font-label-md text-label-md font-semibold text-on-surface truncate">Optical Field Resonating</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Tap facets below to narrow the search</p>
+<div class="facet-panel" id="sec-1">
+<div class="grid grid-cols-3 gap-3 px-2 pb-3 usec-body-1">
+<button class="uchip pad pad-0" data-u="1" data-v="Prescription / Rx"><span class="material-symbols-outlined pad-ic">prescriptions</span><span class="pad-lb">Prescription / Rx</span></button>
+<button class="uchip pad pad-1" data-u="1" data-v="Receipt / Bill"><span class="material-symbols-outlined pad-ic">receipt_long</span><span class="pad-lb">Receipt / Bill</span></button>
+<button class="uchip pad pad-2" data-u="1" data-v="Lab report"><span class="material-symbols-outlined pad-ic">labs</span><span class="pad-lb">Lab report</span></button>
+<button class="uchip pad pad-3" data-u="1" data-v="Screenshot"><span class="material-symbols-outlined pad-ic">smartphone</span><span class="pad-lb">Screenshot</span></button>
 </div>
 </div>
-<div class="flex items-center gap-1.5 shrink-0">
-<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
-<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Awaiting input</span>
+<div class="facet-panel hidden" id="sec-2">
+<div class="usec-body-2 grid grid-cols-3 gap-3 px-2 pb-3">
+<button class="uchip pad pad-4" data-u="2" data-v="Had a date printed on it"><span class="material-symbols-outlined pad-ic">event_available</span><span class="pad-lb">Had a date printed on it</span></button>
+<button class="uchip pad pad-5" data-u="2" data-v="White document"><span class="material-symbols-outlined pad-ic">description</span><span class="pad-lb">White document</span></button>
+<button class="uchip pad pad-6" data-u="2" data-v="Coloured document"><span class="material-symbols-outlined pad-ic">palette</span><span class="pad-lb">Coloured document</span></button>
+<button class="uchip pad pad-7" data-u="2" data-v="Screenshot (light mode)"><span class="material-symbols-outlined pad-ic">light_mode</span><span class="pad-lb">Screenshot (light mode)</span></button>
+<button class="uchip pad pad-0" data-u="2" data-v="Screenshot (dark mode)"><span class="material-symbols-outlined pad-ic">dark_mode</span><span class="pad-lb">Screenshot (dark mode)</span></button>
+<button class="uchip pad pad-1" data-u="2" data-v="Paper receipt"><span class="material-symbols-outlined pad-ic">receipt</span><span class="pad-lb">Paper receipt</span></button>
+<button class="uchip pad pad-2" data-u="2" data-v="Handwriting present"><span class="material-symbols-outlined pad-ic">draw</span><span class="pad-lb">Handwriting present</span></button>
 </div>
 </div>
-<!-- Progressive Reveal: Collapsed Section 1 (pending until reviewer taps) -->
-<div class="rounded-lg bg-surface-container-low shadow-sm">
-<button class="w-full p-space-md flex items-center justify-between text-left" onclick="uToggle(1)">
-<div class="flex items-center gap-space-xs min-w-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] usec-status-1">add_circle</span>
-<span class="font-label-lg text-label-lg font-semibold text-on-surface">1. Documents &amp; Screenshots</span>
-<span class="text-body-sm text-on-surface-variant truncate ml-1 usec-sum-1">· Tap to choose</span>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform usec-icon-1">expand_more</span>
-</button>
-<div class="hidden px-space-md pb-space-md flex flex-wrap gap-2 usec-body-1">
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="1" data-v="Prescription / Rx">Prescription / Rx</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="1" data-v="Receipt / Bill">Receipt / Bill</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="1" data-v="Lab report">Lab report</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="1" data-v="Screenshot">Screenshot</button>
+<div class="facet-panel hidden" id="sec-3">
+<div class="flex flex-col gap-2.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Option 1 — Specific date</span>
+<div class="grid grid-cols-3 gap-2">
+<div class="relative"><select id="yr" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">Year</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
+<div class="relative"><select id="mo" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
+<div class="relative"><select id="dy" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">Day</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
 </div>
 </div>
-<!-- Progressive Reveal: Section 2 with nested OCR sub-item (structural fix: OCR In-Image Text Spotting lives here, not as its own section) -->
-<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm shadow-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs min-w-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] usec-status-2">add_circle</span>
-<span class="font-label-lg text-label-lg font-semibold text-on-surface">2. Visual &amp; Material Clues</span>
-<span class="text-body-sm text-on-surface-variant truncate ml-1 usec-sum-2">· Tap to choose</span>
-</div>
-
-</div>
-<div class="flex flex-wrap gap-2 pt-1">
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Had a date printed on it">Had a date printed on it</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="White document">White document</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Coloured document">Coloured document</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Screenshot (light mode)">Screenshot (light mode)</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Screenshot (dark mode)">Screenshot (dark mode)</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Paper receipt">Paper receipt</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="2" data-v="Handwriting present">Handwriting present</button>
-</div>
-</div>
-<!-- Progressive Reveal: Collapsed Section 3 -->
-<div class="rounded-lg bg-surface-container-low shadow-sm">
-<button class="w-full p-space-md flex items-center justify-between text-left" onclick="uToggle(3)">
-<div class="flex items-center gap-space-xs min-w-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] usec-status-3">add_circle</span>
-<span class="font-label-lg text-label-lg font-semibold text-on-surface">3. Date Horizon</span>
-<span class="text-body-sm text-on-surface-variant truncate ml-1 usec-sum-3">· Tap to choose</span>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform usec-icon-3">expand_more</span>
-</button>
-<div class="hidden px-space-md pb-space-md flex flex-col gap-3 usec-body-3">
-<div class="flex flex-col gap-1.5">
-<span class="font-label-md text-label-md font-medium text-on-surface-variant">Leading Path: Rough Range / Fuzzy Season</span>
-<div class="flex flex-wrap gap-2">
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="3" data-v="2024">2024</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="3" data-v="2023–2025">2023–2025</button>
-
-</div>
-<div class="flex flex-col gap-1.5 mt-1 pt-1">
-<span class="font-label-md text-label-md font-medium text-on-surface-variant">Second Path: Precise Year &amp; Month Selector</span>
-<div class="grid grid-cols-2 gap-2">
-<select class="w-full h-10 px-3 rounded-full bg-surface-container text-on-surface text-[13px] font-medium appearance-none cursor-pointer"><option>Year</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option></select>
-<select class="w-full h-10 px-3 rounded-full bg-surface-container text-on-surface text-[13px] font-medium appearance-none cursor-pointer"><option>Month</option><option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option></select>
+<div class="flex flex-col gap-2 mt-space-sm pt-space-xs border-t border-outline-variant/30">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Option 2 — Year range</span>
+<div class="flex items-center gap-2">
+<div class="relative"><select id="yr-from" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">From</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
+<div class="relative"><select id="yr-to" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">To</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
 </div>
 </div>
 </div>
-</div>
-<!-- Progressive Reveal: CURRENT EXPANDED SECTION (Entity & Origin with Fix 1) -->
-<section class="space-y-space-sm p-space-md bg-surface-container-lowest rounded-lg shadow-md border-2 border-primary/20">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[20px]">contacts</span>
-<h2 class="font-title-lg text-title-lg font-bold text-on-surface">4. Entity &amp; Origin</h2>
-</div>
-<span class="font-label-md text-label-md font-semibold text-primary uppercase tracking-wide">Current Focus</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-Tap matching originator cues to sharpen resolution.
-</p>
-<div class="grid grid-cols-2 gap-space-sm pt-space-xs" id="entity-grid">
-<!-- Doctor / Clinic -->
-<button class="flex flex-col text-left p-space-md rounded-lg bg-surface-container-low text-on-surface shadow-sm active:scale-95 transition-all hover:bg-surface-container">
-<div class="flex items-center justify-between w-full mb-2">
-<span class="material-symbols-outlined text-[24px] text-on-surface-variant">local_hospital</span>
-</div>
-<span class="font-label-lg text-label-lg font-semibold">Doctor / Clinic</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Medical Provider</span>
-</button>
-<!-- Self / Personal ID -->
-<button class="flex flex-col text-left p-space-md rounded-lg bg-surface-container-low text-on-surface shadow-sm active:scale-95 transition-all hover:bg-surface-container">
-<div class="flex items-center justify-between w-full mb-2">
-<span class="material-symbols-outlined text-[24px] text-on-surface-variant">person</span>
-</div>
-<span class="font-label-lg text-label-lg font-semibold">Self / Personal ID</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Family &amp; Self</span>
-</button>
-<!-- Received from someone else -->
-<button class="flex flex-col text-left p-space-md rounded-lg bg-surface-container-low text-on-surface shadow-sm active:scale-95 transition-all hover:bg-surface-container">
-<div class="flex items-center justify-between w-full mb-2">
-<span class="material-symbols-outlined text-[24px]">forward_to_inbox</span>
-</div>
-<span class="font-label-lg text-label-lg font-semibold leading-snug">Received from someone else</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Not self-captured</span>
-</button>
-<!-- Work / Employer -->
-<button class="flex flex-col text-left p-space-md rounded-lg bg-surface-container-low text-on-surface shadow-sm active:scale-95 transition-all hover:bg-surface-container">
-<div class="flex items-center justify-between w-full mb-2">
-<span class="material-symbols-outlined text-[24px] text-on-surface-variant">apartment</span>
-</div>
-<span class="font-label-lg text-label-lg font-semibold">Work / Employer</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Expense &amp; HR</span>
-</button>
+<section class="facet-panel hidden" id="sec-4">
+<div id="entity-grid" class="grid grid-cols-3 gap-3 px-2 pb-3 usec-body-4">
+<button class="uchip pad pad-3" data-u="4" data-v="Doctor / Clinic"><span class="material-symbols-outlined pad-ic">local_hospital</span><span class="pad-lb">Doctor / Clinic</span></button>
+<button class="uchip pad pad-3" data-u="4" data-v="Self / Personal ID"><span class="material-symbols-outlined pad-ic">person</span><span class="pad-lb">Self / Personal ID</span></button>
+<button class="uchip pad pad-3" data-u="4" data-v="Received from someone else"><span class="material-symbols-outlined pad-ic">forward_to_inbox</span><span class="pad-lb">Received from someone else</span></button>
+<button class="uchip pad pad-3" data-u="4" data-v="Work / Employer"><span class="material-symbols-outlined pad-ic">apartment</span><span class="pad-lb">Work / Employer</span></button>
 </div>
 </section>
-<!-- Progressive Reveal: Collapsed Section 5 -->
-<div class="rounded-lg bg-surface-container-low shadow-sm">
-<button class="w-full p-space-md flex items-center justify-between text-left" onclick="uToggle(5)">
-<div class="flex items-center gap-space-xs min-w-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] usec-status-5">add_circle</span>
-<span class="font-label-lg text-label-lg font-semibold text-on-surface">5. Revisit Frequency</span>
-<span class="text-body-sm text-on-surface-variant truncate ml-1 usec-sum-5">· Tap to choose</span>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform usec-icon-5">expand_more</span>
-</button>
-<div class="hidden px-space-md pb-space-md flex flex-wrap gap-2 usec-body-5">
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="5" data-v="Opened many times">Opened many times</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="5" data-v="A few times">A few times</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="5" data-v="Once only">Once only</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="5" data-v="Never since">Never since</button>
+<div class="facet-panel hidden" id="sec-5">
+<div class="grid grid-cols-3 gap-3 px-2 pb-3 usec-body-5">
+<button class="uchip pad pad-5" data-u="5" data-v="Opened many times"><span class="material-symbols-outlined pad-ic">repeat</span><span class="pad-lb">Opened many times</span></button>
+<button class="uchip pad pad-6" data-u="5" data-v="A few times"><span class="material-symbols-outlined pad-ic">schedule</span><span class="pad-lb">A few times</span></button>
+<button class="uchip pad pad-7" data-u="5" data-v="Once only"><span class="material-symbols-outlined pad-ic">looks_one</span><span class="pad-lb">Once only</span></button>
+<button class="uchip pad pad-0" data-u="5" data-v="Never since"><span class="material-symbols-outlined pad-ic">visibility_off</span><span class="pad-lb">Never since</span></button>
 </div>
 </div>
-<!-- Progressive Reveal: Collapsed Section 6 -->
-<div class="rounded-lg bg-surface-container-low shadow-sm">
-<button class="w-full p-space-md flex items-center justify-between text-left" onclick="uToggle(6)">
-<div class="flex items-center gap-space-xs min-w-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] usec-status-6">add_circle</span>
-<span class="font-label-lg text-label-lg font-semibold text-on-surface">6. Anomaly &amp; Validation Flags</span>
-<span class="text-body-sm text-on-surface-variant truncate ml-1 usec-sum-6">· Tap to choose</span>
-</div>
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform usec-icon-6">expand_more</span>
-</button>
-<div class="hidden px-space-md pb-space-md flex flex-wrap gap-2 usec-body-6">
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="6" data-v="Has a signature">Has a signature</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="6" data-v="Shows a dosage">Shows a dosage</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="6" data-v="Stamped / official">Stamped / official</button>
-<button class="uchip px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-[13px] font-medium active:scale-95 transition-all" data-u="6" data-v="Nothing unusual">Nothing unusual</button>
-</div>
-</div>
-<!-- Output Candidate Spaces at Bottom -->
-<section class="space-y-space-sm pt-space-xs" id="doc-spaces">
+<!-- Candidate spaces footer -->
+<div class="px-margin pb-4 mt-4"
+<div class="p-3 rounded-2xl bg-surface-container flex flex-col gap-2 shadow-inner mb-3">
 <div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
-<h2 class="font-title-lg text-title-lg font-bold text-on-surface">3 Candidate Document Spaces Forming</h2>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[22px]">all_inclusive</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Engine: <span id="res-anchors">0</span></span>
 </div>
-
+<span class="font-label-md text-label-md font-bold text-tertiary">3 Candidate Documents</span>
 </div>
-<!-- Primary Candidate: Dr Sharma -->
-<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-md space-y-space-sm cursor-pointer hover:shadow-lg transition-shadow" onclick="openDoc('rx')">
-<div class="flex items-start justify-between gap-space-sm">
-<div class="flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">medical_services</span>
-</div>
-<div class="min-w-0">
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="font-label-md text-label-md font-semibold text-secondary">Primary Match Space</span>
-</div>
-<h3 class="font-title-lg text-title-lg font-bold text-on-surface leading-snug">
-              Dr. Sharma Clinic Prescription &amp; Medical Bill
-            </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-              March 2024 • Pharmacy stamp detected • 4 scans grouped
-            </p>
+<div class="flex items-center justify-between h-7 px-2 bg-surface-container-highest rounded-full overflow-hidden gap-1"><div class="w-1.5 h-3 bg-tertiary rounded-full animate-bounce" style="animation-delay:0.00s;"></div><div class="w-1.5 h-5 bg-primary-container rounded-full animate-bounce" style="animation-delay:0.08s;"></div><div class="w-1.5 h-6 bg-tertiary-container rounded-full animate-bounce" style="animation-delay:0.16s;"></div><div class="w-1.5 h-4 bg-tertiary rounded-full animate-bounce" style="animation-delay:0.24s;"></div><div class="w-1.5 h-6 bg-primary-container rounded-full animate-bounce" style="animation-delay:0.32s;"></div><div class="w-1.5 h-3 bg-tertiary-container rounded-full animate-bounce" style="animation-delay:0.40s;"></div><div class="w-1.5 h-5 bg-tertiary rounded-full animate-bounce" style="animation-delay:0.48s;"></div><div class="w-1.5 h-4 bg-primary-container rounded-full animate-bounce" style="animation-delay:0.56s;"></div><div class="w-1.5 h-6 bg-tertiary-container rounded-full animate-bounce" style="animation-delay:0.64s;"></div><div class="w-1.5 h-2 bg-outline rounded-full"></div><div class="w-1.5 h-2 bg-outline rounded-full"></div><div class="w-1.5 h-2 bg-outline rounded-full"></div><div class="w-1.5 h-2 bg-outline rounded-full"></div><div class="w-1.5 h-2 bg-outline rounded-full"></div></div>
+<div class="flex items-center gap-1.5 px-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">auto_awesome</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Correlated to: <span class="font-semibold text-on-surface">Dr. Sharma Clinic — Prescription</span></p>
 </div>
 </div>
-</div>
-<!-- Visual cluster strip -->
-<div class="grid grid-cols-4 gap-space-xs pt-1">
-<div class="h-16 rounded bg-surface-container flex items-center justify-center text-on-surface-variant text-[11px] font-medium text-center p-1">
-          Rx Page 1
-        </div>
-<div class="h-16 rounded bg-surface-container flex items-center justify-center text-on-surface-variant text-[11px] font-medium text-center p-1">
-          Receipt
-        </div>
-<div class="h-16 rounded bg-surface-container flex items-center justify-center text-on-surface-variant text-[11px] font-medium text-center p-1">
-          Lab Bill
-        </div>
-<div class="h-16 rounded bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center text-[11px] font-semibold text-center p-1">
-          +1 Doc
-        </div>
+<div class="flex items-center gap-2">
+<button class="flex-1 h-11 px-3 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-semibold active:scale-95 transition-all whitespace-nowrap" onclick="openDoc('rx')">Candidate 1</button>
+<button class="flex-1 h-11 px-3 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-semibold active:scale-95 transition-all whitespace-nowrap" onclick="openDoc('lab')">Candidate 2</button>
+<button class="flex-1 h-11 px-3 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-semibold active:scale-95 transition-all whitespace-nowrap" onclick="openDoc('derma')">Candidate 3</button>
 </div>
 </div>
-<!-- Candidate 2 -->
-<div class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex items-center justify-between gap-space-sm cursor-pointer hover:bg-surface-container transition-colors" onclick="openDoc('lab')">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
-</div>
-<div class="min-w-0">
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-primary"></span>
-<span class="font-label-md text-label-md font-medium text-primary">Correlated Clue</span>
-</div>
-<h4 class="font-label-lg text-label-lg font-semibold text-on-surface truncate">
-            Lab Test Reports &amp; Health Insurance
-          </h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Feb 2024 • 3 docs</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
-</div>
-<!-- Candidate 3 -->
-<div class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex items-center justify-between gap-space-sm cursor-pointer hover:bg-surface-container transition-colors" onclick="openDoc('derma')">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[22px]">note_alt</span>
-</div>
-<div class="min-w-0">
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
-<span class="font-label-md text-label-md font-medium text-on-surface-variant">Possible match</span>
-</div>
-<h4 class="font-label-lg text-label-lg font-semibold text-on-surface truncate">
-            Dermatologist Consultation Note
-          </h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Jan 2024 • 2 docs</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
-</div>
-</section>
-</div></main>
+</div></div>
+</main>
 <script>
 // Utility drawer interactions: all sections start pending; reviewer taps to resolve
 (function () {
@@ -342,6 +187,18 @@ Tap matching originator cues to sharpen resolution.
     location.href = 'confirm.html';
   };
 
+  window.showFacet = function(n) {
+    document.querySelectorAll('.facet-panel').forEach(function(p) { p.classList.add('hidden'); });
+    const sec = document.getElementById('sec-' + n);
+    if (sec) sec.classList.remove('hidden');
+    document.querySelectorAll('.grp-pill').forEach(function(b, i) {
+      const on = (i + 1) === n;
+      b.classList.toggle('bg-surface-container-lowest', on); b.classList.toggle('shadow-sm', on);
+      b.classList.toggle('text-primary', on); b.classList.toggle('font-semibold', on);
+      b.classList.toggle('text-on-surface-variant', !on); b.classList.toggle('font-medium', !on);
+      if (on) b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  };
   window.uToggle = function (n) {
     var b = document.querySelector('.usec-body-' + n);
     var ic = document.querySelector('.usec-icon-' + n);
