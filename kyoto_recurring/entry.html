@@ -108,12 +108,12 @@
 <div class="w-12 h-1.5 rounded-full bg-surface-variant mx-auto mb-2"></div>
 <div class="px-margin pb-3">
 <div class="flex items-center gap-1 p-1 bg-surface-container rounded-full overflow-x-auto" style="scrollbar-width:none">
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(6)">Scene</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Stage</button>
+<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(5)">When</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-primary font-semibold font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(1)">Who</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(2)">What</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(3)">Where</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Stage</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(5)">When</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(6)">Scene</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(7)">Wearing</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(8)">Objects</button>
 <button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(9)">Pose</button>
@@ -123,7 +123,7 @@
 <!-- Interactive Progressive Soundboard Accordions (10 Strict Categories) -->
 <div class="px-margin flex flex-col gap-3 mt-3 pb-space-lg" id="wayfinder-accordions">
 <!-- Section 1: Who was with you (Collapsed / Resolved) -->
-<div class="facet-panel" id="sec-1">
+<div class="facet-panel hidden" id="sec-1">
 <div class="flex flex-col gap-space-sm px-2" id="sec-body-1">
 <div class="grid grid-cols-3 gap-3">
 <button class="pad pad-0" onclick="handleSelectTile(1, 'Sister')">
@@ -325,7 +325,7 @@
 </div>
 </div>
 <!-- Section 7: Scenery & time of day (Optional) -->
-<div class="facet-panel hidden" id="sec-6">
+<div class="facet-panel" id="sec-6">
 <div class="flex flex-col gap-space-sm px-2" id="sec-body-6">
 <div class="grid grid-cols-3 gap-3">
 <button class="pad pad-6" onclick="handleSelectTile(6, 'Diya-lit evening')">
