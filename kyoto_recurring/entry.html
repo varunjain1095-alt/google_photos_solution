@@ -422,7 +422,7 @@
     if (sec) sec.classList.remove('hidden');
     const pills = document.querySelectorAll('.grp-pill');
     pills.forEach(function(b, i) {
-      const on = (i + 1) === n;
+      const on = b.getAttribute("onclick") === "showFacet(" + n + ")";
       b.classList.toggle('bg-surface-container-lowest', on); b.classList.toggle('shadow-sm', on);
       b.classList.toggle('text-primary', on); b.classList.toggle('font-semibold', on);
       b.classList.toggle('text-on-surface-variant', !on); b.classList.toggle('font-medium', !on);
