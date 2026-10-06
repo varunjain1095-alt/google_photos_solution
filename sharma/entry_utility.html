@@ -84,11 +84,11 @@
 <!-- Ribbon -->
 <div class="px-margin pb-3">
 <div class="flex items-center gap-1 p-1 bg-surface-container rounded-full overflow-x-auto" style="scrollbar-width:none">
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-primary font-semibold font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(1)">Docs</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(2)">Visuals</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(3)">Date</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Origin</button>
-<button class="grp-pill shrink-0 px-3 py-1.5 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(5)">Frequency</button>
+<button style="display:flex;justify-content:center" class="grp-pill flex-1 px-3 py-2 rounded-full bg-surface-container-lowest shadow-sm text-primary font-semibold font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(1)">Docs</button>
+<button style="display:flex;justify-content:center" class="grp-pill flex-1 px-3 py-2 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(2)">Visuals</button>
+<button style="display:flex;justify-content:center" class="grp-pill flex-1 px-3 py-2 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(3)">Date</button>
+<button style="display:flex;justify-content:center" class="grp-pill flex-1 px-3 py-2 rounded-full text-on-surface-variant font-medium font-label-md text-label-md whitespace-nowrap transition-all" onclick="showFacet(4)">Origin</button>
+
 </div>
 </div>
 <div class="facet-panel" id="sec-1">
@@ -111,7 +111,7 @@
 </div>
 </div>
 <div class="facet-panel hidden" id="sec-3">
-<div class="flex flex-col gap-2.5">
+<div class="px-margin"><div class="flex flex-col gap-2.5">
 <span class="font-label-md text-label-md font-semibold text-on-surface-variant">Option 1 — Specific date</span>
 <div class="grid grid-cols-3 gap-2">
 <div class="relative"><select id="yr" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">Year</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
@@ -126,7 +126,7 @@
 <div class="relative"><select id="yr-to" onchange="datePicked()" class="w-full h-10 px-3 pr-7 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium appearance-none cursor-pointer"><option selected="">To</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option></select><span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2.5 top-3 pointer-events-none">arrow_drop_down</span></div>
 </div>
 </div>
-</div>
+</div></div>
 <section class="facet-panel hidden" id="sec-4">
 <div id="entity-grid" class="grid grid-cols-3 gap-3 px-2 pb-3 usec-body-4">
 <button class="uchip pad pad-3" data-u="4" data-v="Doctor / Clinic"><span class="material-symbols-outlined pad-ic">local_hospital</span><span class="pad-lb">Doctor / Clinic</span></button>
@@ -135,14 +135,7 @@
 <button class="uchip pad pad-3" data-u="4" data-v="Work / Employer"><span class="material-symbols-outlined pad-ic">apartment</span><span class="pad-lb">Work / Employer</span></button>
 </div>
 </section>
-<div class="facet-panel hidden" id="sec-5">
-<div class="grid grid-cols-3 gap-3 px-2 pb-3 usec-body-5">
-<button class="uchip pad pad-5" data-u="5" data-v="Opened many times"><span class="material-symbols-outlined pad-ic">repeat</span><span class="pad-lb">Opened many times</span></button>
-<button class="uchip pad pad-6" data-u="5" data-v="A few times"><span class="material-symbols-outlined pad-ic">schedule</span><span class="pad-lb">A few times</span></button>
-<button class="uchip pad pad-7" data-u="5" data-v="Once only"><span class="material-symbols-outlined pad-ic">looks_one</span><span class="pad-lb">Once only</span></button>
-<button class="uchip pad pad-0" data-u="5" data-v="Never since"><span class="material-symbols-outlined pad-ic">visibility_off</span><span class="pad-lb">Never since</span></button>
-</div>
-</div>
+
 <!-- Candidate spaces footer -->
 <div class="px-margin pb-4 mt-4"
 <div class="p-3 rounded-2xl bg-surface-container flex flex-col gap-2 shadow-inner mb-3">
